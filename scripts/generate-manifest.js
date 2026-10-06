@@ -15,6 +15,8 @@ function scanPresentaciones() {
   for (const entry of entries) {
     if (entry.isDirectory()) {
       const folderName = entry.name;
+      if (folderName === 'ejemplo-demostracion') continue;
+
       const indexPath = path.join(presentacionesDir, folderName, 'index.html');
       
       let title = folderName.replace(/-/g, ' ').toUpperCase();
@@ -42,7 +44,7 @@ function scanPresentaciones() {
         title: title,
         description: description,
         tag: tag,
-        url: `/presentaciones/${folderName}/index.html`
+        url: `presentaciones/${folderName}/index.html`
       });
     }
   }

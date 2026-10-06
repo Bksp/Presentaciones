@@ -237,7 +237,7 @@
               Molde con componentes HTML, transiciones y tarjetas personalizables.
             </p>
           </div>
-          <a href="/plantillas/base/index.html" class="card-action secondary">
+          <a href="plantillas/base/index.html" class="card-action secondary">
             <span>Abrir Plantilla HTML</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -251,7 +251,7 @@
               Molde para escribir tus diapositivas 100% en texto plano Markdown.
             </p>
           </div>
-          <a href="/plantillas/markdown/index.html" class="card-action secondary">
+          <a href="plantillas/markdown/index.html" class="card-action secondary">
             <span>Abrir Plantilla Markdown</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -268,7 +268,7 @@
       async function cargarPresentaciones() {
         const container = document.getElementById('presentaciones-container');
         try {
-          const res = await fetch('/presentaciones.json');
+          const res = await fetch('presentaciones.json');
           if (!res.ok) throw new Error('No se pudo cargar la lista');
           const lista = await res.json();
           

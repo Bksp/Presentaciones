@@ -1,5 +1,11 @@
-# Dependencias de Node (se ignora node_modules pero se mantiene vendor/reveal/dist para GitHub Pages)
+# Dependencias de Node
 node_modules/
+
+# Reveal.js esta versionado para GitHub Pages; esto solo ignora archivos nuevos,
+# no cambios en los archivos de vendor/reveal ya rastreados por Git.
+vendor/reveal/
+# Artefactos opcionales de depuracion y modulo no usados por las presentaciones
+*.map
 
 # Archivos de logs y temporales
 *.log
