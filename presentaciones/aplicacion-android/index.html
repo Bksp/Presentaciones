@@ -1,18 +1,45 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>CuidApp - Android | Programación en Android</title>
 
-    <link rel="stylesheet" href="/vendor/reveal/dist/reset.css">
-    <link rel="stylesheet" href="/vendor/reveal/dist/reveal.css">
-    <link rel="stylesheet" href="/vendor/reveal/dist/theme/black.css" id="theme">
-    <link rel="stylesheet" href="/vendor/reveal/dist/plugin/highlight/monokai.css">
-    <link rel="stylesheet" href="/presentaciones/ejemplo-demostracion/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/vendor/reveal/dist/reset.css" />
+    <link rel="stylesheet" href="/vendor/reveal/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="/vendor/reveal/dist/theme/black.css"
+      id="theme"
+    />
+    <link
+      rel="stylesheet"
+      href="/vendor/reveal/dist/plugin/highlight/monokai.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/presentaciones/ejemplo-demostracion/custom.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
     <style>
+      /* ── Sobrescribir variables del tema black ── */
+      :root {
+        --r-main-font-size: 28px; /* era 42px */
+        --r-heading1-size: 2.2em; /* era 2.5em */
+        --r-heading2-size: 1.3em; /* era 1.6em */
+        --r-heading3-size: 1.1em; /* era 1.3em */
+        --r-heading-text-transform: none; /* quita UPPERCASE */
+        --r-heading-font-weight: 700;
+        --r-block-margin: 12px; /* era 20px */
+      }
+
       /* ── Layout base ── */
       .reveal .slides section {
         box-sizing: border-box;
@@ -36,12 +63,14 @@
       }
       .reveal table td {
         padding: 0.3em 0.5em;
-        border-bottom: 1px solid rgba(255,255,255,0.07);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
         vertical-align: top;
-        color: rgba(255,255,255,0.85);
+        color: rgba(255, 255, 255, 0.85);
         word-break: break-word;
       }
-      .reveal table tr:hover td { background: rgba(255,255,255,0.04); }
+      .reveal table tr:hover td {
+        background: rgba(255, 255, 255, 0.04);
+      }
 
       /* ── Badges ── */
       .badge {
@@ -52,13 +81,35 @@
         font-weight: 600;
         white-space: nowrap;
       }
-      .badge-cyan   { background: rgba(6,182,212,0.2);  color: #06b6d4; border: 1px solid rgba(6,182,212,0.4); }
-      .badge-purple { background: rgba(139,92,246,0.2); color: #a78bfa; border: 1px solid rgba(139,92,246,0.4); }
-      .badge-pink   { background: rgba(236,72,153,0.2); color: #f472b6; border: 1px solid rgba(236,72,153,0.4); }
+      .badge-cyan {
+        background: rgba(6, 182, 212, 0.2);
+        color: #06b6d4;
+        border: 1px solid rgba(6, 182, 212, 0.4);
+      }
+      .badge-purple {
+        background: rgba(139, 92, 246, 0.2);
+        color: #a78bfa;
+        border: 1px solid rgba(139, 92, 246, 0.4);
+      }
+      .badge-pink {
+        background: rgba(236, 72, 153, 0.2);
+        color: #f472b6;
+        border: 1px solid rgba(236, 72, 153, 0.4);
+      }
 
       /* ── Grids — usar em, no rem ── */
-      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7em; margin-top: 0.8em; }
-      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7em; margin-top: 0.8em; }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7em;
+        margin-top: 0.8em;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.7em;
+        margin-top: 0.8em;
+      }
 
       /* ── Feature boxes más compactos en grids ── */
       .grid-2 .feature-box,
@@ -73,79 +124,136 @@
 
       /* ── Código inline ── */
       code.inline {
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
         padding: 0.08em 0.35em;
         border-radius: 4px;
-        font-family: 'Fira Code', monospace;
+        font-family: "Fira Code", monospace;
         font-size: 0.88em;
         white-space: nowrap;
       }
 
-      /* ── Tabla de intents: columna # estrecha, Propósito/Funcionalidad ancha ── */
-      .tbl-intents col.col-num  { width: 4%; }
-      .tbl-intents col.col-orig { width: 18%; }
-      .tbl-intents col.col-dest { width: 22%; }
-      .tbl-intents col.col-met  { width: 18%; }
-      .tbl-intents col.col-prop { width: 38%; }
+      /* ── Tabla de intents: proporciones ajustadas para 1400px ── */
+      .tbl-intents col.col-num {
+        width: 3%;
+      }
+      .tbl-intents col.col-orig {
+        width: 20%;
+      }
+      .tbl-intents col.col-dest {
+        width: 20%;
+      }
+      .tbl-intents col.col-met {
+        width: 20%;
+      }
+      .tbl-intents col.col-prop {
+        width: 37%;
+      }
 
-      .tbl-screens col.col-tipo { width: 18%; }
-      .tbl-screens col.col-arch { width: 30%; }
-      .tbl-screens col.col-func { width: 52%; }
+      .tbl-screens col.col-tipo {
+        width: 15%;
+      }
+      .tbl-screens col.col-arch {
+        width: 28%;
+      }
+      .tbl-screens col.col-func {
+        width: 57%;
+      }
     </style>
   </head>
   <body>
     <div class="reveal">
-
-      <div class="reveal-footer-demo"><i class="fa-solid fa-heart-pulse"></i> CuidApp Android &bull; Programación en Android</div>
+      <div class="reveal-footer-demo">
+        <i class="fa-solid fa-heart-pulse"></i> CuidApp Android &bull;
+        Programación en Android
+      </div>
 
       <div class="slides">
-
         <!-- ══════════════════════════════════════════
              SLIDE 1 — Portada
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 50%, #311042 100%)">
+        <section
+          data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 50%, #311042 100%)"
+        >
           <span class="pill">Programación en Android</span>
-          <h1 class="hero-title" style="margin-top:0.6rem;">CuidApp</h1>
-          <p style="font-size:0.85em; opacity:0.75; margin-top:0.2rem;">Tu Asistente de Salud Integral &mdash; Plataforma Nativa Android</p>
+          <h1 class="hero-title" style="margin-top: 0.6rem">CuidApp</h1>
+          <p style="font-size: 0.85em; opacity: 0.75; margin-top: 0.2rem">
+            Tu Asistente de Salud Integral &mdash; Plataforma Nativa Android
+          </p>
 
-          <div class="grid-3" style="margin-top:2.5rem;">
+          <div class="grid-3" style="margin-top: 2.5rem">
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-user-pen" style="color:#38bdf8;"></i></div>
-              <h4 style="font-size:0.75em; margin:0.3rem 0; color:#38bdf8;">Catherine Gómez</h4>
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-pen" style="color: #38bdf8"></i>
+              </div>
+              <h4 style="font-size: 0.75em; margin: 0.3rem 0; color: #38bdf8">
+                Catherine Gómez
+              </h4>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-user-pen" style="color:#c084fc;"></i></div>
-              <h4 style="font-size:0.75em; margin:0.3rem 0; color:#c084fc;">Fábian Cares</h4>
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-pen" style="color: #c084fc"></i>
+              </div>
+              <h4 style="font-size: 0.75em; margin: 0.3rem 0; color: #c084fc">
+                Fábian Cares
+              </h4>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-user-pen" style="color:#f472b6;"></i></div>
-              <h4 style="font-size:0.75em; margin:0.3rem 0; color:#f472b6;">Sebastián Pérez</h4>
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-pen" style="color: #f472b6"></i>
+              </div>
+              <h4 style="font-size: 0.75em; margin: 0.3rem 0; color: #f472b6">
+                Sebastián Pérez
+              </h4>
             </div>
           </div>
-          <p style="font-size:0.55em; opacity:0.45; margin-top:2rem;">Profesor: Pedro Gatica</p>
+          <p style="font-size: 0.55em; opacity: 0.45; margin-top: 2rem">
+            Profesor: Pedro Gatica
+          </p>
         </section>
 
         <!-- ══════════════════════════════════════════
              SLIDE 2 — Introducción a la problemática
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e293b 100%)">
+        <section
+          data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
+        >
           <span class="pill">Introducción</span>
-          <h2 style="margin-top:0.6rem;"><i class="fa-solid fa-stethoscope" style="font-size:0.7em; opacity:0.6;"></i> ¿Qué es CuidApp?</h2>
+          <h2 style="margin-top: 0.6rem">¿Qué es CuidApp?</h2>
 
-          <div class="feature-box fragment fade-up" style="margin-top:1.5rem; font-size:0.8em; line-height:1.7;">
-            <p>Una aplicación médica diseñada para <strong style="color:#38bdf8;">centralizar la información del paciente</strong>, facilitar el acceso a expedientes y monitorear la salud en tiempo real.</p>
+          <div
+            class="feature-box fragment fade-up"
+            style="margin-top: 1.5rem; font-size: 0.8em; line-height: 1.7"
+          >
+            <p>
+              Una aplicación médica diseñada para
+              <strong style="color: #38bdf8"
+                >centralizar la información del paciente</strong
+              >, facilitar el acceso a expedientes y monitorear la salud en
+              tiempo real.
+            </p>
           </div>
 
-          <div class="grid-2" style="margin-top:1rem;">
+          <div class="grid-2" style="margin-top: 1rem">
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-layer-group" style="color:#a78bfa;"></i></div>
-              <h4 style="font-size:0.7em; color:#a78bfa;">Arquitectura</h4>
-              <p style="font-size:0.6em; opacity:0.8;">Plana (Java / XML, sin MVC/MVVM)</p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-layer-group" style="color: #a78bfa"></i>
+              </div>
+              <h4 style="font-size: 0.7em; color: #a78bfa">Arquitectura</h4>
+              <p style="font-size: 0.6em; opacity: 0.8">
+                Plana (Java / XML, sin MVC/MVVM)
+              </p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button" style="color:#f472b6;"></i></div>
-              <h4 style="font-size:0.7em; color:#f472b6;">Componentes</h4>
-              <p style="font-size:0.6em; opacity:0.8;">4 Activities + 1 Service</p>
+              <div class="feature-icon">
+                <i
+                  class="fa-solid fa-mobile-screen-button"
+                  style="color: #f472b6"
+                ></i>
+              </div>
+              <h4 style="font-size: 0.7em; color: #f472b6">Componentes</h4>
+              <p style="font-size: 0.6em; opacity: 0.8">
+                4 Activities + 1 Service
+              </p>
             </div>
           </div>
         </section>
@@ -153,30 +261,70 @@
         <!-- ══════════════════════════════════════════
              SLIDE 3 — Entorno de desarrollo
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #1e293b 0%, #0f172a 100%)">
-          <span class="pill" style="color:#a78bfa; border-color:rgba(139,92,246,0.4); background:rgba(139,92,246,0.15);"><i class="fa-solid fa-gear"></i> Entorno de Desarrollo</span>
-          <h2 style="margin-top:0.6rem;">Stack Tecnológico</h2>
+        <section
+          data-background-gradient="linear-gradient(135deg, #1e293b 0%, #0f172a 100%)"
+        >
+          <span
+            class="pill"
+            style="
+              color: #a78bfa;
+              border-color: rgba(139, 92, 246, 0.4);
+              background: rgba(139, 92, 246, 0.15);
+            "
+            ><i class="fa-solid fa-gear"></i> Entorno de Desarrollo</span
+          >
+          <h2 style="margin-top: 0.6rem">Stack Tecnológico</h2>
 
-          <div class="grid-2" style="margin-top:1.2rem;">
+          <div class="grid-2" style="margin-top: 1.2rem">
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-brands fa-java" style="color:#38bdf8;"></i></div>
-              <h4 style="font-size:0.75em; color:#38bdf8; margin-bottom:0.3rem;">Lenguaje</h4>
-              <p style="font-size:0.65em; opacity:0.85;">Java</p>
+              <div class="feature-icon">
+                <i class="fa-brands fa-java" style="color: #38bdf8"></i>
+              </div>
+              <h4
+                style="font-size: 0.75em; color: #38bdf8; margin-bottom: 0.3rem"
+              >
+                Lenguaje
+              </h4>
+              <p style="font-size: 0.65em; opacity: 0.85">Java - Android</p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-palette" style="color:#a78bfa;"></i></div>
-              <h4 style="font-size:0.75em; color:#a78bfa; margin-bottom:0.3rem;">Interfaz</h4>
-              <p style="font-size:0.65em; opacity:0.85;">XML &middot; Material Components &middot; Tema Oscuro Material 3</p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-palette" style="color: #a78bfa"></i>
+              </div>
+              <h4
+                style="font-size: 0.75em; color: #a78bfa; margin-bottom: 0.3rem"
+              >
+                Interfaz
+              </h4>
+              <p style="font-size: 0.65em; opacity: 0.85">
+                XML &middot; Material Components &middot; Tema Oscuro Material 3
+              </p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-cubes" style="color:#f472b6;"></i></div>
-              <h4 style="font-size:0.75em; color:#f472b6; margin-bottom:0.3rem;">SDK (Min / Target / Compile)</h4>
-              <p style="font-size:0.65em; opacity:0.85;">API 31 (Android 12) / API 36 (Android 16) / API 36</p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-cubes" style="color: #f472b6"></i>
+              </div>
+              <h4
+                style="font-size: 0.75em; color: #f472b6; margin-bottom: 0.3rem"
+              >
+                SDK (Min / Target / Compile)
+              </h4>
+              <p style="font-size: 0.65em; opacity: 0.85">
+                API 31 (Android 12) / API 36 (Android 16) / API 36
+              </p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-box-archive" style="color:#38bdf8;"></i></div>
-              <h4 style="font-size:0.75em; color:#38bdf8; margin-bottom:0.3rem;">Paquete</h4>
-              <p style="font-size:0.65em; opacity:0.85;"><code class="inline">com.santo_tomas.cuidapp</code></p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-box-archive" style="color: #38bdf8"></i>
+              </div>
+              <h4
+                style="font-size: 0.75em; color: #38bdf8; margin-bottom: 0.3rem"
+              >
+                Paquete
+              </h4>
+              <p style="font-size: 0.65em; opacity: 0.85">
+                <code class="inline">com.santo_tomas.cuidapp</code>
+              </p>
             </div>
           </div>
         </section>
@@ -184,16 +332,32 @@
         <!-- ══════════════════════════════════════════
              SLIDE 4 — Estructura de pantallas
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)">
-          <span class="pill" style="color:#f472b6; border-color:rgba(236,72,153,0.4); background:rgba(236,72,153,0.15);"><i class="fa-solid fa-table-cells-large"></i> Estructura</span>
-          <h2 style="margin-top:0.6rem;">Pantallas y Componentes</h2>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)"
+        >
+          <span
+            class="pill"
+            style="
+              color: #f472b6;
+              border-color: rgba(236, 72, 153, 0.4);
+              background: rgba(236, 72, 153, 0.15);
+            "
+            ><i class="fa-solid fa-table-cells-large"></i> Estructura</span
+          >
+          <h2 style="margin-top: 0.6rem">Pantallas y Componentes</h2>
 
-          <table class="tbl-screens fragment fade-up" style="margin-top:0.8em;">
+          <table class="tbl-screens fragment fade-up" style="margin-top: 0.8em">
             <colgroup>
-              <col class="col-tipo"><col class="col-arch"><col class="col-func">
+              <col class="col-tipo" />
+              <col class="col-arch" />
+              <col class="col-func" />
             </colgroup>
             <thead>
-              <tr><th>Tipo</th><th>Archivo</th><th>Función</th></tr>
+              <tr>
+                <th>Tipo</th>
+                <th>Archivo</th>
+                <th>Función</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -233,34 +397,57 @@
         <!-- ══════════════════════════════════════════
              SLIDE 5 — Intents Explícitos
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0b0f19 100%)">
-          <span class="pill"><i class="fa-solid fa-route"></i> Intents Explícitos — Navegación Interna</span>
-          <h2 style="margin-top:0.6rem;">3 de 8 Intents</h2>
+        <section
+          data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0b0f19 100%)"
+        >
+          <span class="pill"
+            ><i class="fa-solid fa-route"></i> Intents Explícitos — Navegación
+            Interna</span
+          >
+          <h2 style="margin-top: 0.6rem">3 de 8 Intents</h2>
 
-          <table class="tbl-intents fragment fade-up" style="margin-top:0.8em;">
+          <table class="tbl-intents fragment fade-up" style="margin-top: 0.8em">
             <colgroup>
-              <col class="col-num"><col class="col-orig"><col class="col-dest"><col class="col-met"><col class="col-prop">
+              <col class="col-num" />
+              <col class="col-orig" />
+              <col class="col-dest" />
+              <col class="col-met" />
+              <col class="col-prop" />
             </colgroup>
             <thead>
-              <tr><th>#</th><th>Origen</th><th>Destino</th><th>Método</th><th>Propósito</th></tr>
+              <tr>
+                <th>#</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Método</th>
+                <th>Propósito</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong style="color:#38bdf8;">1</strong></td>
+                <td><strong style="color: #38bdf8">1</strong></td>
                 <td><code class="inline">MenuPrincipalActivity</code></td>
-                <td><code class="inline">FichaPacienteActivity</code><br><code class="inline">MisExpedientesActivity</code><br><code class="inline">DashboardActivity</code></td>
+                <td>
+                  <code class="inline">FichaPacienteActivity</code><br /><code
+                    class="inline"
+                    >MisExpedientesActivity</code
+                  ><br /><code class="inline">DashboardActivity</code>
+                </td>
                 <td><code class="inline">navegarA()</code></td>
                 <td>Navegación desde el menú hacia el resto de las vistas</td>
               </tr>
               <tr>
-                <td><strong style="color:#38bdf8;">2</strong></td>
+                <td><strong style="color: #38bdf8">2</strong></td>
                 <td>Las 3 Activities</td>
                 <td><code class="inline">MenuPrincipalActivity</code></td>
                 <td><code class="inline">volverAlMenu()</code></td>
-                <td>Retorno global (<code class="inline">CLEAR_TOP</code> + <code class="inline">SINGLE_TOP</code>)</td>
+                <td>
+                  Retorno global (<code class="inline">CLEAR_TOP</code> +
+                  <code class="inline">SINGLE_TOP</code>)
+                </td>
               </tr>
               <tr>
-                <td><strong style="color:#38bdf8;">3</strong></td>
+                <td><strong style="color: #38bdf8">3</strong></td>
                 <td><code class="inline">DashboardActivity</code></td>
                 <td><code class="inline">ServicioMonitoreo</code></td>
                 <td><code class="inline">iniciarServicioMonitoreo()</code></td>
@@ -273,50 +460,86 @@
         <!-- ══════════════════════════════════════════
              SLIDE 6 — Intents Implícitos
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e293b 100%)">
-          <span class="pill" style="color:#a78bfa; border-color:rgba(139,92,246,0.4); background:rgba(139,92,246,0.15);"><i class="fa-solid fa-arrow-up-right-from-square"></i> Intents Implícitos — Acciones del SO</span>
-          <h2 style="margin-top:0.6rem;">5 de 8 Intents</h2>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e293b 100%)"
+        >
+          <span
+            class="pill"
+            style="
+              color: #a78bfa;
+              border-color: rgba(139, 92, 246, 0.4);
+              background: rgba(139, 92, 246, 0.15);
+            "
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i> Intents
+            Implícitos — Acciones del SO</span
+          >
+          <h2 style="margin-top: 0.6rem">5 de 8 Intents</h2>
 
-          <table class="tbl-intents fragment fade-up" style="margin-top:0.8em;">
+          <table class="tbl-intents fragment fade-up" style="margin-top: 0.8em">
             <colgroup>
-              <col class="col-num"><col class="col-orig"><col class="col-dest"><col class="col-met"><col class="col-prop">
+              <col class="col-num" />
+              <col class="col-orig" />
+              <col class="col-dest" />
+              <col class="col-met" />
+              <col class="col-prop" />
             </colgroup>
             <thead>
-              <tr><th>#</th><th>Ubicación</th><th>Acción</th><th>Método</th><th>Funcionalidad</th></tr>
+              <tr>
+                <th>#</th>
+                <th>Ubicación</th>
+                <th>Acción</th>
+                <th>Método</th>
+                <th>Funcionalidad</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong style="color:#a78bfa;">4</strong></td>
+                <td><strong style="color: #a78bfa">4</strong></td>
                 <td><code class="inline">FichaPacienteActivity</code></td>
                 <td><code class="inline">ACTION_DIAL</code></td>
                 <td><code class="inline">llamarEmergencia()</code></td>
                 <td>Abre el marcador con el número de emergencia (131)</td>
               </tr>
               <tr>
-                <td><strong style="color:#a78bfa;">5</strong></td>
+                <td><strong style="color: #a78bfa">5</strong></td>
                 <td><code class="inline">FichaPacienteActivity</code></td>
-                <td><code class="inline">ACTION_SENDTO</code><br><span style="opacity:0.6;font-size:0.9em;">mailto:</span></td>
+                <td>
+                  <code class="inline">ACTION_SENDTO</code><br /><span
+                    style="opacity: 0.6; font-size: 0.9em"
+                    >mailto:</span
+                  >
+                </td>
                 <td><code class="inline">enviarCorreo()</code></td>
                 <td>Abre el cliente de correo para escribir al cuidador</td>
               </tr>
               <tr>
-                <td><strong style="color:#a78bfa;">6</strong></td>
+                <td><strong style="color: #a78bfa">6</strong></td>
                 <td><code class="inline">FichaPacienteActivity</code></td>
                 <td><code class="inline">ACTION_IMAGE_CAPTURE</code></td>
                 <td><code class="inline">abrirCamara()</code></td>
                 <td>Abre la cámara para tomar la foto de perfil</td>
               </tr>
               <tr>
-                <td><strong style="color:#a78bfa;">7</strong></td>
+                <td><strong style="color: #a78bfa">7</strong></td>
                 <td><code class="inline">MenuPrincipalActivity</code></td>
-                <td><code class="inline">ACTION_VIEW</code><br><span style="opacity:0.6;font-size:0.9em;">geo:</span></td>
+                <td>
+                  <code class="inline">ACTION_VIEW</code><br /><span
+                    style="opacity: 0.6; font-size: 0.9em"
+                    >geo:</span
+                  >
+                </td>
                 <td><code class="inline">abrirMapaHospitales()</code></td>
                 <td>Abre mapas buscando hospitales cercanos</td>
               </tr>
               <tr>
-                <td><strong style="color:#a78bfa;">8</strong></td>
+                <td><strong style="color: #a78bfa">8</strong></td>
                 <td><code class="inline">MenuPrincipalActivity</code></td>
-                <td><code class="inline">ACTION_VIEW</code><br><span style="opacity:0.6;font-size:0.9em;">https:</span></td>
+                <td>
+                  <code class="inline">ACTION_VIEW</code><br /><span
+                    style="opacity: 0.6; font-size: 0.9em"
+                    >https:</span
+                  >
+                </td>
                 <td><code class="inline">abrirPortalMinsal()</code></td>
                 <td>Abre el navegador en el portal del Ministerio de Salud</td>
               </tr>
@@ -327,57 +550,144 @@
         <!-- ══════════════════════════════════════════
              SLIDE 7 — Funcionalidades extra
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #1e293b 0%, #1e1b4b 100%)">
-          <span class="pill" style="color:#f472b6; border-color:rgba(236,72,153,0.4); background:rgba(236,72,153,0.15);"><i class="fa-solid fa-plus"></i> Extras (fuera de la rúbrica)</span>
-          <h2 style="margin-top:0.6rem;">Funcionalidades Adicionales</h2>
+        <section
+          data-background-gradient="linear-gradient(135deg, #1e293b 0%, #1e1b4b 100%)"
+        >
+          <span
+            class="pill"
+            style="
+              color: #f472b6;
+              border-color: rgba(236, 72, 153, 0.4);
+              background: rgba(236, 72, 153, 0.15);
+            "
+            ><i class="fa-solid fa-plus"></i> Extras (fuera de la rúbrica)</span
+          >
+          <h2 style="margin-top: 0.6rem">Funcionalidades Adicionales</h2>
 
-          <div class="grid-2" style="margin-top:1.5rem;">
+          <div class="grid-2" style="margin-top: 1.5rem">
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-share-nodes" style="color:#f472b6;"></i></div>
-              <h4 style="font-size:0.75em; color:#f472b6; margin-bottom:0.3rem;">Compartir Reporte</h4>
-              <p style="font-size:0.62em; opacity:0.85;"><code class="inline">DashboardActivity</code></p>
-              <p style="font-size:0.62em; opacity:0.85;"><code class="inline">ACTION_SEND</code> &mdash; Comparte el reporte de salud como texto.</p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-share-nodes" style="color: #f472b6"></i>
+              </div>
+              <h4
+                style="font-size: 0.75em; color: #f472b6; margin-bottom: 0.3rem"
+              >
+                Compartir Reporte
+              </h4>
+              <p style="font-size: 0.62em; opacity: 0.85">
+                <code class="inline">DashboardActivity</code>
+              </p>
+              <p style="font-size: 0.62em; opacity: 0.85">
+                <code class="inline">ACTION_SEND</code> &mdash; Comparte el
+                reporte de salud como texto.
+              </p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-file-pdf" style="color:#38bdf8;"></i></div>
-              <h4 style="font-size:0.75em; color:#38bdf8; margin-bottom:0.3rem;">Selector de PDF</h4>
-              <p style="font-size:0.62em; opacity:0.85;"><code class="inline">MisExpedientesActivity</code></p>
-              <p style="font-size:0.62em; opacity:0.85;"><code class="inline">ACTION_GET_CONTENT</code> &mdash; Selecciona un PDF desde el explorador de archivos.</p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-file-pdf" style="color: #38bdf8"></i>
+              </div>
+              <h4
+                style="font-size: 0.75em; color: #38bdf8; margin-bottom: 0.3rem"
+              >
+                Selector de PDF
+              </h4>
+              <p style="font-size: 0.62em; opacity: 0.85">
+                <code class="inline">MisExpedientesActivity</code>
+              </p>
+              <p style="font-size: 0.62em; opacity: 0.85">
+                <code class="inline">ACTION_GET_CONTENT</code> &mdash;
+                Selecciona un PDF desde el explorador de archivos.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            Estos dos intents adicionales están marcados como EXTRA en el código fuente.
+            Estos dos intents adicionales están marcados como EXTRA en el código
+            fuente.
           </aside>
         </section>
 
         <!-- ══════════════════════════════════════════
              SLIDE 8 — Características técnicas
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #0f172a 0%, #311042 100%)">
-          <span class="pill" style="color:#06b6d4; border-color:rgba(6,182,212,0.4); background:rgba(6,182,212,0.15);"><i class="fa-solid fa-microchip"></i> Características Técnicas</span>
-          <h2 style="margin-top:0.6rem;">Bajo el Capó</h2>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0f172a 0%, #311042 100%)"
+        >
+          <span
+            class="pill"
+            style="
+              color: #06b6d4;
+              border-color: rgba(6, 182, 212, 0.4);
+              background: rgba(6, 182, 212, 0.15);
+            "
+            ><i class="fa-solid fa-microchip"></i> Características
+            Técnicas</span
+          >
+          <h2 style="margin-top: 0.6rem">Bajo el Capó</h2>
 
-          <div class="grid-2" style="margin-top:1rem;">
+          <div class="grid-2" style="margin-top: 1rem">
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-arrows-spin" style="color:#38bdf8;"></i></div>
-              <h4 style="font-size:0.7em; color:#38bdf8;">Multithreading y Servicios</h4>
-              <p style="font-size:0.58em; opacity:0.8; line-height:1.5;"><code class="inline">ServicioMonitoreo</code> ejecuta un Thread propio que genera BPM aleatorio cada 3 s. Si supera 100, simula taquicardia sin bloquear el UI Thread.</p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-arrows-spin" style="color: #38bdf8"></i>
+              </div>
+              <h4 style="font-size: 0.7em; color: #38bdf8">
+                Multithreading y Servicios
+              </h4>
+              <p style="font-size: 0.58em; opacity: 0.8; line-height: 1.5">
+                <code class="inline">ServicioMonitoreo</code> ejecuta un Thread
+                propio que genera BPM aleatorio cada 3 s. Si supera 100, simula
+                taquicardia sin bloquear el UI Thread.
+              </p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-tower-broadcast" style="color:#a78bfa;"></i></div>
-              <h4 style="font-size:0.7em; color:#a78bfa;">Comunicación Service &rarr; Activity</h4>
-              <p style="font-size:0.58em; opacity:0.8; line-height:1.5;">Broadcasts restringidos a la propia app (<code class="inline">setPackage</code>). Recibe con <code class="inline">BroadcastReceiver</code> + <code class="inline">RECEIVER_NOT_EXPORTED</code>. Un único diálogo de alerta se actualiza en vez de apilar uno nuevo cada 3 s.</p>
+              <div class="feature-icon">
+                <i
+                  class="fa-solid fa-tower-broadcast"
+                  style="color: #a78bfa"
+                ></i>
+              </div>
+              <h4 style="font-size: 0.7em; color: #a78bfa">
+                Comunicación Service &rarr; Activity
+              </h4>
+              <p style="font-size: 0.58em; opacity: 0.8; line-height: 1.5">
+                Broadcasts restringidos a la propia app (<code class="inline"
+                  >setPackage</code
+                >). Recibe con <code class="inline">BroadcastReceiver</code> +
+                <code class="inline">RECEIVER_NOT_EXPORTED</code>. Un único
+                diálogo de alerta se actualiza en vez de apilar uno nuevo cada 3
+                s.
+              </p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-shield-halved" style="color:#f472b6;"></i></div>
-              <h4 style="font-size:0.7em; color:#f472b6;">Ciclo de vida seguro</h4>
-              <p style="font-size:0.58em; opacity:0.8; line-height:1.5;">Hilo detenido con <code class="inline">interrupt()</code> + bandera <code class="inline">volatile</code> al cerrar el Dashboard. Receptor registrado en <code class="inline">onResume()</code> y desregistrado en <code class="inline">onPause()</code>.</p>
+              <div class="feature-icon">
+                <i class="fa-solid fa-shield-halved" style="color: #f472b6"></i>
+              </div>
+              <h4 style="font-size: 0.7em; color: #f472b6">
+                Ciclo de vida seguro
+              </h4>
+              <p style="font-size: 0.58em; opacity: 0.8; line-height: 1.5">
+                Hilo detenido con <code class="inline">interrupt()</code> +
+                bandera <code class="inline">volatile</code> al cerrar el
+                Dashboard. Receptor registrado en
+                <code class="inline">onResume()</code> y desregistrado en
+                <code class="inline">onPause()</code>.
+              </p>
             </div>
             <div class="feature-box fragment fade-up">
-              <div class="feature-icon"><i class="fa-solid fa-ruler-combined" style="color:#38bdf8;"></i></div>
-              <h4 style="font-size:0.7em; color:#38bdf8;">Compatibilidad Android 15/16</h4>
-              <p style="font-size:0.58em; opacity:0.8; line-height:1.5;"><code class="inline">targetSdk 36</code>: pantallas de borde a borde. <code class="inline">InsetsUtil</code> aplica el espacio de las barras del sistema para que nada quede tapado.</p>
+              <div class="feature-icon">
+                <i
+                  class="fa-solid fa-ruler-combined"
+                  style="color: #38bdf8"
+                ></i>
+              </div>
+              <h4 style="font-size: 0.7em; color: #38bdf8">
+                Compatibilidad Android 15/16
+              </h4>
+              <p style="font-size: 0.58em; opacity: 0.8; line-height: 1.5">
+                <code class="inline">targetSdk 36</code>: pantallas de borde a
+                borde. <code class="inline">InsetsUtil</code> aplica el espacio
+                de las barras del sistema para que nada quede tapado.
+              </p>
             </div>
           </div>
         </section>
@@ -385,15 +695,41 @@
         <!-- ══════════════════════════════════════════
              SLIDE 9 — Cierre
         ══════════════════════════════════════════ -->
-        <section data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0b0f19 100%)">
-          <span class="pill" style="border-color:rgba(192,132,252,0.4); color:#c084fc;"><i class="fa-solid fa-graduation-cap"></i> Desarrollado en Santo Tomás</span>
-          <h2 style="font-size:2em; margin-top:1rem;">¡Gracias!</h2>
-          <p style="font-size:0.8em; opacity:0.75; margin-top:0.5rem; max-width:600px; margin-left:auto; margin-right:auto;">CuidApp — Tu Asistente de Salud Integral en Android Nativo</p>
-          <div style="font-size:0.6em; opacity:0.5; margin-top:2rem;">
-            Presiona <kbd style="background:rgba(255,255,255,0.15); padding:2px 8px; border-radius:4px;">ESC</kbd> para ver la vista global
+        <section
+          data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0b0f19 100%)"
+        >
+          <span
+            class="pill"
+            style="border-color: rgba(192, 132, 252, 0.4); color: #c084fc"
+            ><i class="fa-solid fa-graduation-cap"></i> Desarrollado en Santo
+            Tomás</span
+          >
+          <h2 style="font-size: 2em; margin-top: 1rem">¡Gracias!</h2>
+          <p
+            style="
+              font-size: 0.8em;
+              opacity: 0.75;
+              margin-top: 0.5rem;
+              max-width: 600px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            CuidApp — Tu Asistente de Salud Integral en Android Nativo
+          </p>
+          <div style="font-size: 0.6em; opacity: 0.5; margin-top: 2rem">
+            Presiona
+            <kbd
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                padding: 2px 8px;
+                border-radius: 4px;
+              "
+              >ESC</kbd
+            >
+            para ver la vista global
           </div>
         </section>
-
       </div>
     </div>
 
@@ -405,10 +741,12 @@
     <script>
       Reveal.initialize({
         hash: true,
-        slideNumber: 'c/t',
-        transition: 'convex',
-        margin: 0.1,
-        plugins: [ RevealHighlight, RevealNotes, RevealSearch, RevealZoom ]
+        width: 1400,
+        height: 800,
+        slideNumber: "c/t",
+        transition: "convex",
+        margin: 0.05,
+        plugins: [RevealHighlight, RevealNotes, RevealSearch, RevealZoom],
       });
     </script>
   </body>
