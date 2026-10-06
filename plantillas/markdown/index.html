@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Markdown</title>
+
+    <link rel="stylesheet" href="/vendor/reveal/dist/reset.css">
+    <link rel="stylesheet" href="/vendor/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="/vendor/reveal/dist/theme/dracula.css" id="theme">
+    <link rel="stylesheet" href="/vendor/reveal/dist/plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Carga automáticamente el archivo diapositivas.md -->
+        <section data-markdown="diapositivas.md"
+                 data-separator="^\r?\n---\r?\n"
+                 data-separator-vertical="^\r?\n--\r?\n"
+                 data-separator-notes="^Note:">
+        </section>
+      </div>
+    </div>
+
+    <script src="/vendor/reveal/dist/reveal.js"></script>
+    <script src="/vendor/reveal/dist/plugin/markdown/markdown.js"></script>
+    <script src="/vendor/reveal/dist/plugin/highlight/highlight.js"></script>
+    <script src="/vendor/reveal/dist/plugin/notes/notes.js"></script>
+
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>

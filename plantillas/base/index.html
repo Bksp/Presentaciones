@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Plantilla Base - Presentación Reveal.js</title>
+    <meta name="description" content="Plantilla base configurable para crear presentaciones interactivas con reveal.js">
+
+    <!-- CSS de Reveal.js -->
+    <link rel="stylesheet" href="/vendor/reveal/dist/reset.css">
+    <link rel="stylesheet" href="/vendor/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="/vendor/reveal/dist/theme/dracula.css" id="theme">
+
+    <!-- Resaltado de código (Syntax Highlighting) -->
+    <link rel="stylesheet" href="/vendor/reveal/dist/plugin/highlight/monokai.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/plantillas/base/custom.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Elemento decorativo o marca de agua constante (opcional) -->
+      <div class="reveal-footer">
+        <span>Presentación</span> • <span>Tu Organización / Nombre</span>
+      </div>
+
+      <div class="slides">
+        <!-- Diapositiva 1: Portada -->
+        <section data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)">
+          <span class="badge">Plantilla Base</span>
+          <h1 class="gradient-text">Título de la Presentación</h1>
+          <p style="opacity: 0.8; margin-top: 1rem;">Subtítulo descriptivo o resumen breve del contenido</p>
+          <div style="margin-top: 2.5rem; font-size: 0.7em; opacity: 0.6;">
+            <span>Por: Tu Nombre</span> | <span>Fecha: 2026</span>
+          </div>
+        </section>
+
+        <!-- Diapositiva 2: Introducción -->
+        <section>
+          <h2>Objetivos Principales</h2>
+          <p style="opacity: 0.8; font-size: 0.9em; margin-bottom: 2rem;">
+            Breve descripción de los puntos clave que se abordarán en esta sesión.
+          </p>
+
+          <div class="grid-3">
+            <div class="glass-card fragment">
+              <h3 style="font-size: 1.1em; color: #818cf8;">01. Punto Inicial</h3>
+              <p style="font-size: 0.7em; opacity: 0.8; margin-top: 0.5rem;">
+                Explicación sintética del primer concepto o pilar temático.
+              </p>
+            </div>
+
+            <div class="glass-card fragment">
+              <h3 style="font-size: 1.1em; color: #c084fc;">02. Desarrollo</h3>
+              <p style="font-size: 0.7em; opacity: 0.8; margin-top: 0.5rem;">
+                Profundización en datos, análisis y casos de uso prácticos.
+              </p>
+            </div>
+
+            <div class="glass-card fragment">
+              <h3 style="font-size: 1.1em; color: #f472b6;">03. Conclusiones</h3>
+              <p style="font-size: 0.7em; opacity: 0.8; margin-top: 0.5rem;">
+                Resumen de resultados, aprendizajes y siguientes pasos.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            Notas del orador para la diapositiva 2. Presiona 'S' para abrir la ventana de notas del orador.
+          </aside>
+        </section>
+
+        <!-- Diapositiva 3: Ejemplo de Código -->
+        <section>
+          <h2>Demostración de Código</h2>
+          <p style="font-size: 0.8em; opacity: 0.8; margin-bottom: 1rem;">
+            Reveal.js permite destacar líneas de código paso a paso:
+          </p>
+
+          <pre><code class="javascript" data-trim data-line-numbers="1|3-5|7-9"><script type="template">
+            // 1. Configuración inicial
+            const revealConfig = {
+              hash: true,
+              slideNumber: 'c/t',
+              plugins: [ RevealHighlight, RevealNotes ]
+            };
+
+            // 2. Inicialización
+            Reveal.initialize(revealConfig);
+          </script></code></pre>
+        </section>
+
+        <!-- Diapositiva 4: Cierre -->
+        <section data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)">
+          <h2 class="gradient-text">¡Gracias!</h2>
+          <p style="margin-top: 1rem; opacity: 0.9;">¿Preguntas o comentarios?</p>
+          <p style="font-size: 0.7em; opacity: 0.6; margin-top: 2rem;">
+            Presiona <kbd style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">ESC</kbd> para ver la vista general de diapositivas.
+          </p>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Scripts de Reveal.js -->
+    <script src="/vendor/reveal/dist/reveal.js"></script>
+    <script src="/vendor/reveal/dist/plugin/notes/notes.js"></script>
+    <script src="/vendor/reveal/dist/plugin/markdown/markdown.js"></script>
+    <script src="/vendor/reveal/dist/plugin/highlight/highlight.js"></script>
+    <script src="/vendor/reveal/dist/plugin/search/search.js"></script>
+    <script src="/vendor/reveal/dist/plugin/zoom/zoom.js"></script>
+
+    <script>
+      // Inicializar Reveal.js con opciones optimizadas
+      Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+        transition: 'slide',
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom ]
+      });
+    </script>
+  </body>
+</html>

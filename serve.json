@@ -1,0 +1,9 @@
+{
+  "public": ".",
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/presentaciones/ejemplo-demostracion", "destination": "/presentaciones/ejemplo-demostracion/index.html" },
+    { "source": "/plantillas/base", "destination": "/plantillas/base/index.html" },
+    { "source": "/plantillas/markdown", "destination": "/plantillas/markdown/index.html" }
+  ]
+}

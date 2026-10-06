@@ -1,0 +1,72 @@
+/* Estilos específicos para la presentación de demostración */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+  --accent-pink: #ec4899;
+}
+
+.reveal {
+  font-family: var(--font-body);
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.hero-title {
+  font-size: 2.8em !important;
+  font-weight: 800;
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem !important;
+}
+
+.feature-box {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.feature-icon {
+  font-size: 1.8em;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+.reveal-footer-demo {
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+  font-size: 0.4em;
+  opacity: 0.5;
+  z-index: 10;
+}
