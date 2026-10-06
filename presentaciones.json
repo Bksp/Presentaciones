@@ -1,0 +1,16 @@
+[
+  {
+    "id": "aplicacion-android",
+    "title": "Demostración Completa de Reveal.js",
+    "description": "Presentación interactiva creada con reveal.js",
+    "tag": "Presentación",
+    "url": "/presentaciones/aplicacion-android/index.html"
+  },
+  {
+    "id": "ejemplo-demostracion",
+    "title": "Demostración Completa de Reveal.js",
+    "description": "Presentación interactiva creada con reveal.js",
+    "tag": "Presentación",
+    "url": "/presentaciones/ejemplo-demostracion/index.html"
+  }
+]

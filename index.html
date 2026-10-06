@@ -307,39 +307,29 @@
           <span>⚡ Reveal.js Framework</span>
         </div>
         <h1>Centro de Presentaciones</h1>
-        <p>Entorno local centralizado para visualizar, crear y personalizar presentaciones en HTML y Markdown.</p>
+        <p>Entorno centralizado para visualizar y crear presentaciones interactivas en HTML y Markdown.</p>
       </header>
 
-      <!-- SECCIÓN: PRESENTACIONES Y PLANTILLAS -->
-      <h2 class="section-title">📂 Presentaciones Disponibles</h2>
+      <!-- SECCIÓN: PRESENTACIONES DINÁMICAS -->
+      <h2 class="section-title">📂 Tus Presentaciones</h2>
+      <div class="grid-cards" id="presentaciones-container">
+        <!-- Se cargan dinámicamente desde presentaciones.json -->
+      </div>
+
+      <!-- SECCIÓN: PLANTILLAS REUTILIZABLES -->
+      <h2 class="section-title">📐 Plantillas Disponibles</h2>
       <div class="grid-cards">
-
-        <!-- Card Demostración -->
-        <div class="card">
-          <div>
-            <div class="card-tag">Demostración Interactiva</div>
-            <h3 class="card-title">Ejemplo de Características</h3>
-            <p class="card-desc">
-              Presentación completa que muestra diapositivas 2D, Markdown externo, notas del orador (S), zoom y resaltado de código.
-            </p>
-          </div>
-          <a href="/presentaciones/ejemplo-demostracion/index.html" class="card-action">
-            <span>Ver Demostración</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
         <!-- Card Plantilla HTML -->
         <div class="card">
           <div>
             <div class="card-tag">Plantilla HTML</div>
-            <h3 class="card-title">Plantilla Reutilizable</h3>
+            <h3 class="card-title">Plantilla Base HTML</h3>
             <p class="card-desc">
               Estructura HTML limpia para duplicar y personalizar con diseños avanzados y tarjetas glassmorphism.
             </p>
           </div>
           <a href="/plantillas/base/index.html" class="card-action secondary">
-            <span>Plantilla HTML</span>
+            <span>Usar Plantilla HTML</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -348,17 +338,16 @@
         <div class="card">
           <div>
             <div class="card-tag">Plantilla Markdown</div>
-            <h3 class="card-title">100% Markdown (.md)</h3>
+            <h3 class="card-title">Plantilla 100% Markdown</h3>
             <p class="card-desc">
               Escribe tus diapositivas únicamente en un archivo <code>diapositivas.md</code> sin escribir etiquetas HTML.
             </p>
           </div>
           <a href="/plantillas/markdown/index.html" class="card-action secondary">
-            <span>Plantilla Markdown</span>
+            <span>Usar Plantilla Markdown</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-
       </div>
 
       <!-- SECCIÓN: CÓMO CREAR UNA NUEVA PRESENTACIÓN -->
@@ -369,20 +358,20 @@
           <div class="step-item">
             <div class="step-num">1</div>
             <h4>Copiar Plantilla</h4>
-            <p>Elige tu formato preferido (HTML o Markdown) y duplícalo en <code>presentaciones/</code>:</p>
-            <code-block>cp -r plantillas/markdown presentaciones/mi-charla</code-block>
+            <p>Duplica cualquier carpeta de plantilla dentro de <code>presentaciones/</code>:</p>
+            <code-block>cp -r plantillas/markdown presentaciones/mi-nueva-charla</code-block>
           </div>
 
           <div class="step-item">
             <div class="step-num">2</div>
             <h4>Editar Contenido</h4>
-            <p>Edita <code>diapositivas.md</code> o <code>index.html</code> según la plantilla que elegiste.</p>
+            <p>Edita <code>diapositivas.md</code> o <code>index.html</code> en tu nueva carpeta.</p>
           </div>
 
           <div class="step-item">
             <div class="step-num">3</div>
-            <h4>Iniciar Servidor</h4>
-            <p>Ejecuta el comando en tu terminal para ver los cambios en tiempo real con servidor local:</p>
+            <h4>Auto-Detección</h4>
+            <p>¡El sistema detectará tu nueva carpeta automáticamente al guardar o publicar en GitHub!</p>
             <code-block>npm start</code-block>
           </div>
 
@@ -424,5 +413,40 @@
         <p>Instalación local de <strong>reveal.js</strong> v5.1.0 • Ubicación: <code>/home/logan/Documentos/Presentaciones</code></p>
       </footer>
     </div>
+
+    <!-- Script de auto-detección dinámica de presentaciones -->
+    <script>
+      async function cargarPresentaciones() {
+        const container = document.getElementById('presentaciones-container');
+        try {
+          const res = await fetch('/presentaciones.json');
+          if (!res.ok) throw new Error('No se pudo cargar presentaciones.json');
+          const lista = await res.json();
+          
+          if (!lista || lista.length === 0) {
+            container.innerHTML = `<p style="color: #94a3b8; font-size: 0.95rem;">No hay presentaciones en la carpeta /presentaciones aún.</p>`;
+            return;
+          }
+
+          container.innerHTML = lista.map(p => `
+            <div class="card">
+              <div>
+                <div class="card-tag">${p.tag || 'Presentación'}</div>
+                <h3 class="card-title">${p.title || p.id}</h3>
+                <p class="card-desc">${p.description || 'Presentación interactiva reveal.js'}</p>
+              </div>
+              <a href="${p.url}" class="card-action">
+                <span>Ver Presentación</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          `).join('');
+        } catch (err) {
+          console.warn('Cargando vista fallback:', err);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', cargarPresentaciones);
+    </script>
   </body>
 </html>

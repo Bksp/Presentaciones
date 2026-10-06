@@ -5,13 +5,11 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-# Permisos necesarios para publicar en GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Permite una sola implementación simultánea
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -25,6 +23,14 @@ jobs:
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Escanear presentaciones y actualizar manifiesto
+        run: node scripts/generate-manifest.js
 
       - name: Configurar Pages
         uses: actions/configure-pages@v5

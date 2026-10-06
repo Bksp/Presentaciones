@@ -4,10 +4,11 @@
   "description": "Repositorio central de presentaciones interactivas usando reveal.js",
   "main": "index.html",
   "scripts": {
-    "start": "serve . -p 8000",
-    "dev": "serve . -p 8000",
+    "scan": "node scripts/generate-manifest.js",
+    "start": "npm run scan && serve . -p 8000",
+    "dev": "npm run scan && serve . -p 8000",
     "copy-reveal": "mkdir -p vendor/reveal && cp -r node_modules/reveal.js/dist vendor/reveal/ && mkdir -p vendor/reveal/dist/plugin/notes vendor/reveal/dist/plugin/markdown vendor/reveal/dist/plugin/search vendor/reveal/dist/plugin/zoom vendor/reveal/dist/plugin/math && cp vendor/reveal/dist/plugin/notes.js vendor/reveal/dist/plugin/notes/notes.js && cp vendor/reveal/dist/plugin/markdown.js vendor/reveal/dist/plugin/markdown/markdown.js && cp vendor/reveal/dist/plugin/highlight.js vendor/reveal/dist/plugin/highlight/highlight.js && cp vendor/reveal/dist/plugin/search.js vendor/reveal/dist/plugin/search/search.js && cp vendor/reveal/dist/plugin/zoom.js vendor/reveal/dist/plugin/zoom/zoom.js && cp vendor/reveal/dist/plugin/math.js vendor/reveal/dist/plugin/math/math.js",
-    "postinstall": "npm run copy-reveal"
+    "postinstall": "npm run scan && npm run copy-reveal"
   },
   "keywords": [
     "revealjs",
