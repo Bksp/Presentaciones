@@ -395,6 +395,209 @@
         </section>
 
         <!-- ══════════════════════════════════════════
+             SLIDE 4.1 — Menú Principal (Screenshot 1)
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 100%)"
+        >
+          <span class="pill"
+            ><i class="fa-solid fa-house"></i> Interfaz & Navegación</span
+          >
+          <h2 style="margin-top: 0.6rem">Menú Principal (<code class="inline" style="font-size: 0.8em">MenuPrincipalActivity</code>)</h2>
+
+          <div class="showcase-container">
+            <img
+              src="img/1.png"
+              alt="Menú Principal CuidApp"
+              class="phone-mockup fragment fade-right"
+            />
+            <div class="showcase-info fragment fade-left">
+              <div class="feature-box" style="margin-bottom: 0.8rem">
+                <h4 style="font-size: 0.75em; color: #38bdf8; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-compass"></i> Hub Central de la App
+                </h4>
+                <p style="font-size: 0.6em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Punto de entrada con navegación directa hacia los tres módulos clínicos clave y dos acciones rápidas integradas con el sistema.
+                </p>
+              </div>
+
+              <div class="feature-box" style="margin-bottom: 0.8rem">
+                <h4 style="font-size: 0.75em; color: #a78bfa; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-route"></i> Navegación Interna (Intents Explícitos)
+                </h4>
+                <ul style="font-size: 0.58em; opacity: 0.85; margin: 0; padding-left: 1.2rem; line-height: 1.6">
+                  <li><strong>Ficha del Paciente:</strong> perfil clínico y contactos de emergencia.</li>
+                  <li><strong>Expedientes Médicos:</strong> carga y visualización de documentos.</li>
+                  <li><strong>Monitoreo Diario:</strong> métricas y sensor cardíaco en tiempo real.</li>
+                </ul>
+              </div>
+
+              <div class="feature-box">
+                <h4 style="font-size: 0.75em; color: #34d399; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-globe"></i> Accesos Rápidos del Sistema (Intents Implícitos)
+                </h4>
+                <ul style="font-size: 0.58em; opacity: 0.85; margin: 0; padding-left: 1.2rem; line-height: 1.6">
+                  <li><strong>Buscar Hospital Cercano:</strong> abre mapas con query (<code class="inline">geo:0,0?q=hospital</code>).</li>
+                  <li><strong>Portal MINSAL:</strong> abre el navegador web oficial del Ministerio de Salud.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 4.2 — Ficha del Paciente (Screenshots 2 & 3)
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)"
+        >
+          <span class="pill"
+            ><i class="fa-solid fa-id-card"></i> Perfil & Emergencias</span
+          >
+          <h2 style="margin-top: 0.6rem">Ficha del Paciente (<code class="inline" style="font-size: 0.8em">FichaPacienteActivity</code>)</h2>
+
+          <div class="showcase-dual">
+            <img
+              src="img/2.png"
+              alt="Ficha del Paciente"
+              class="phone-mockup-sm fragment fade-up"
+            />
+            <img
+              src="img/3.png"
+              alt="Edición de Datos de Paciente"
+              class="phone-mockup-sm fragment fade-up"
+            />
+            <div class="showcase-info fragment fade-left">
+              <div class="feature-box" style="margin-bottom: 0.7rem">
+                <h4 style="font-size: 0.72em; color: #38bdf8; margin: 0 0 0.3rem 0">
+                  <i class="fa-solid fa-user-check"></i> Datos Clínicos Críticos
+                </h4>
+                <p style="font-size: 0.57em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Visualización clara de Nombre, RUT, Grupo Sanguíneo y Alergias para atención médica oportuna.
+                </p>
+              </div>
+
+              <div class="feature-box" style="margin-bottom: 0.7rem">
+                <h4 style="font-size: 0.72em; color: #f472b6; margin: 0 0 0.3rem 0">
+                  <i class="fa-solid fa-pen-to-square"></i> Edición Dinámica
+                </h4>
+                <p style="font-size: 0.57em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Diálogo modal interactivo para modificar y actualizar los datos del paciente sin abandonar la pantalla.
+                </p>
+              </div>
+
+              <div class="feature-box">
+                <h4 style="font-size: 0.72em; color: #ef4444; margin: 0 0 0.3rem 0">
+                  <i class="fa-solid fa-phone-volume"></i> Integración con Servicios del SO
+                </h4>
+                <ul style="font-size: 0.55em; opacity: 0.85; margin: 0; padding-left: 1.2rem; line-height: 1.5">
+                  <li><strong>Llamar Emergencia:</strong> marcación directa al 131 (<code class="inline">ACTION_DIAL</code>).</li>
+                  <li><strong>Correo a Cuidador:</strong> cliente de correo (<code class="inline">ACTION_SENDTO</code>).</li>
+                  <li><strong>Foto de Perfil:</strong> captura con la app de cámara (<code class="inline">ACTION_IMAGE_CAPTURE</code>).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 4.3 — Expedientes Médicos (Screenshot 4)
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #1e293b 0%, #0f172a 100%)"
+        >
+          <span class="pill"
+            ><i class="fa-solid fa-file-medical"></i> Gestión Documental</span
+          >
+          <h2 style="margin-top: 0.6rem">Expedientes Médicos (<code class="inline" style="font-size: 0.8em">MisExpedientesActivity</code>)</h2>
+
+          <div class="showcase-container">
+            <img
+              src="img/4.png"
+              alt="Expedientes Médicos"
+              class="phone-mockup fragment fade-right"
+            />
+            <div class="showcase-info fragment fade-left">
+              <div class="feature-box" style="margin-bottom: 0.8rem">
+                <h4 style="font-size: 0.75em; color: #38bdf8; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-folder-open"></i> Almacenamiento y Acceso a Documentos
+                </h4>
+                <p style="font-size: 0.6em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Módulo dedicado a la gestión y consulta de exámenes, recetas y documentos clínicos digitales del paciente.
+                </p>
+              </div>
+
+              <div class="feature-box" style="margin-bottom: 0.8rem">
+                <h4 style="font-size: 0.75em; color: #06b6d4; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-file-pdf"></i> Selector de Archivos (SAF)
+                </h4>
+                <p style="font-size: 0.6em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Utiliza <code class="inline">ACTION_GET_CONTENT</code> con tipo MIME <code class="inline">application/pdf</code> para invocar el explorador de documentos del sistema de forma segura.
+                </p>
+              </div>
+
+              <div class="feature-box">
+                <h4 style="font-size: 0.75em; color: #a78bfa; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-arrow-left"></i> Navegación Consistente
+                </h4>
+                <p style="font-size: 0.6em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Botón <code class="inline">Volver al Menú</code> que limpia la pila de actividades mediante <code class="inline">FLAG_ACTIVITY_CLEAR_TOP</code> y <code class="inline">SINGLE_TOP</code>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 4.4 — Dashboard & Monitoreo (Screenshot 5)
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #311042 100%)"
+        >
+          <span class="pill"
+            ><i class="fa-solid fa-heart-pulse"></i> Telemetría y Salud</span
+          >
+          <h2 style="margin-top: 0.6rem">Dashboard en Vivo (<code class="inline" style="font-size: 0.8em">DashboardActivity</code>)</h2>
+
+          <div class="showcase-container">
+            <img
+              src="img/5.png"
+              alt="Dashboard de Salud"
+              class="phone-mockup fragment fade-right"
+            />
+            <div class="showcase-info fragment fade-left">
+              <div class="feature-box" style="margin-bottom: 0.8rem">
+                <h4 style="font-size: 0.75em; color: #ec4899; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-circle-notch"></i> Anillos de Actividad Diaria
+                </h4>
+                <p style="font-size: 0.6em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Visualización de calorías quemadas (300 kcal), tiempo de ejercicio (30 min), horas de pie (5 hrs) y meta de pasos (10,000).
+                </p>
+              </div>
+
+              <div class="feature-box" style="margin-bottom: 0.8rem">
+                <h4 style="font-size: 0.75em; color: #38bdf8; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-wave-square"></i> Sensor Cardíaco en Segundo Plano
+                </h4>
+                <p style="font-size: 0.6em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Alimentado por <code class="inline">ServicioMonitoreo</code>: genera lecturas periódicas de BPM y dispara alertas automáticas en caso de taquicardia (> 100 BPM).
+                </p>
+              </div>
+
+              <div class="feature-box">
+                <h4 style="font-size: 0.75em; color: #f472b6; margin: 0 0 0.4rem 0">
+                  <i class="fa-solid fa-share-nodes"></i> Compartir Reporte
+                </h4>
+                <p style="font-size: 0.6em; opacity: 0.85; margin: 0; line-height: 1.5">
+                  Botón que usa <code class="inline">ACTION_SEND</code> para enviar un reporte resumido de la sesión por WhatsApp, correo o cualquier aplicación compatible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════════
              SLIDE 5 — Intents Explícitos
         ══════════════════════════════════════════ -->
         <section
