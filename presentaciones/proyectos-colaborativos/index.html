@@ -448,12 +448,12 @@
             <span class="pill">
               <i class="fa-solid fa-play"></i> Demostración del MVP
             </span>
-            <h2 style="margin-top: 0.4rem">Flujo de la Demo Funcional</h2>
-            <p style="font-size: 0.68em; opacity: 0.85; max-width: 800px; margin: 0.3rem auto 0.8rem auto">
-              Recorrido interactivo por los tres puntos de contacto esenciales de la plataforma
+            <h2 style="margin-top: 0.3rem">Flujo de la Demo Funcional</h2>
+            <p style="font-size: 0.62em; opacity: 0.85; max-width: 850px; margin: 0.2rem auto 0.6rem auto">
+              Recorrido interactivo por los módulos de paciente, cuidador y administración institucional
             </p>
 
-            <div style="display: flex; gap: 2.2rem; align-items: center; justify-content: center; margin-top: 0.6rem">
+            <div style="display: flex; gap: 1.8rem; align-items: center; justify-content: center; margin-top: 0.4rem">
               <!-- Columna izquierda: Tabla de flujos -->
               <div style="flex: 1.35; text-align: left">
                 <table class="fragment fade-up" style="margin-top: 0">
@@ -463,27 +463,31 @@
                   </colgroup>
                   <thead>
                     <tr>
-                      <th>Flujo de la Demo</th>
-                      <th>Funcionalidad Clave Demostrada</th>
+                      <th>Módulo de la Demo</th>
+                      <th>Funcionalidad y Evidencia en Pantalla</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><span class="badge badge-cyan">1. Adulto Mayor</span></td>
-                      <td>Confirmación de dosis en <strong>un toque</strong> y registro táctil de signos vitales.</td>
+                      <td>Telemetría simple, semáforo de presión/pulso y contacto directo (WhatsApp/Llamada).</td>
                     </tr>
                     <tr>
                       <td><span class="badge badge-purple">2. Cuidador</span></td>
-                      <td>Panel sincronizado en <strong>tiempo real</strong> con alertas preventivas inmediatas.</td>
+                      <td>Evaluación diaria, adherencia a fármacos, síntomas de alerta y escala EVA de dolor.</td>
                     </tr>
                     <tr>
-                      <td><span class="badge badge-pink">3. Clínica / PDF</span></td>
-                      <td>Exportación instantánea de reporte médico estandarizado en <strong>PDF (&lt; 1 min)</strong>.</td>
+                      <td><span class="badge badge-emerald">3. Panel ELEAM</span></td>
+                      <td>Gestión multi-paciente con patologías crónicas múltiples (HTA, Diabetes, EPOC, Renal).</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-amber">4. Admin B2B</span></td>
+                      <td>Asignación de cuidadores a residentes y trazabilidad de contactos institucionales.</td>
                     </tr>
                   </tbody>
                 </table>
-                <p style="font-size: 0.56em; opacity: 0.6; margin-top: 1rem">
-                  Presiona <strong style="color: #38bdf8">ABAJO &darr;</strong> para examinar cada interfaz en pantalla
+                <p style="font-size: 0.54em; opacity: 0.65; margin-top: 0.8rem">
+                  Presiona <strong style="color: #38bdf8">ABAJO &darr;</strong> para examinar cada pantalla en detalle
                 </p>
               </div>
 
@@ -513,133 +517,80 @@
             </div>
           </section>
 
-          <!-- 6.2 Subdiapositiva: Vista Adulto Mayor -->
+          <!-- 6.2 Subdiapositiva 1: Vista Adulto Mayor -->
           <section
             data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 100%)"
           >
             <span class="pill" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4)">
-              <i class="fa-solid fa-person-cane"></i> Demo &bull; Módulo 1
+              <i class="fa-solid fa-person-cane"></i> Módulo 1 &bull; Paciente (Juan Díaz)
             </span>
-            <h3 style="margin-top: 0.4rem">1. Vista Adulto Mayor</h3>
+            <h3 style="margin-top: 0.3rem">Autonomía y Telemetría Simple</h3>
+            <p style="font-size: 0.54em; opacity: 0.85; margin: 0.1rem auto 0.4rem auto; max-width: 950px">
+              Resumen diario de salud con recomendaciones, semáforo de presión (120/80 mmHg) y pulso (72 BPM), confirmación de control completado, llamada directa a la cuidadora y reporte anímico rápido.
+            </p>
 
-            <div class="showcase-container">
-              <img
-                src="img/1.png"
-                alt="Vista Adulto Mayor"
-                class="phone-mockup fragment fade-right"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <div class="image-placeholder fragment fade-right" style="display: none">
-                <i class="fa-solid fa-mobile-screen"></i>
-                <span><strong>img/1.png</strong><br>Vista Adulto Mayor</span>
-              </div>
-
-              <div class="showcase-info fragment fade-left">
-                <div class="feature-box" style="margin-bottom: 0.8rem">
-                  <h4 style="font-size: 0.72em; color: #38bdf8; margin: 0 0 0.3rem 0">
-                    <i class="fa-solid fa-hand-pointer"></i> Interfaz Táctil de Alta Legibilidad
-                  </h4>
-                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
-                    Diseñada con botones de alto contraste y área de contacto amplia. El paciente confirma la ingesta de fármacos con una sola pulsación.
-                  </p>
-                </div>
-
-                <div class="feature-box">
-                  <h4 style="font-size: 0.72em; color: #34d399; margin: 0 0 0.3rem 0">
-                    <i class="fa-solid fa-heart-pulse"></i> Captura Sencilla de Signos Vitales
-                  </h4>
-                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
-                    Ingreso guiado de glucosa, presión arterial y pulsaciones, eliminando la necesidad de planillas de papel.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <img
+              src="img/paciente.png"
+              alt="Vista Adulto Mayor CuidApp"
+              class="screen-mockup-16-9 fragment fade-up"
+            />
           </section>
 
-          <!-- 6.3 Subdiapositiva: Vista Cuidador -->
+          <!-- 6.3 Subdiapositiva 2: Vista Cuidador -->
           <section
             data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)"
           >
             <span class="pill" style="color: #a78bfa; border-color: rgba(139, 92, 246, 0.4)">
-              <i class="fa-solid fa-user-nurse"></i> Demo &bull; Módulo 2
+              <i class="fa-solid fa-user-nurse"></i> Módulo 2 &bull; Cuidadora (Sofía Díaz)
             </span>
-            <h3 style="margin-top: 0.4rem">2. Vista Cuidador</h3>
+            <h3 style="margin-top: 0.3rem">Evaluación Diaria y Detección de Riesgos</h3>
+            <p style="font-size: 0.54em; opacity: 0.85; margin: 0.1rem auto 0.4rem auto; max-width: 950px">
+              Selector multi-paciente, registro táctil de signos vitales y edemas, descarte de síntomas cardiovasculares (cefalea, tinnitus, fosfenos), control de adherencia farmacológica y escala EVA de dolor.
+            </p>
 
-            <div class="showcase-container">
-              <img
-                src="img/2.png"
-                alt="Vista Cuidador"
-                class="phone-mockup fragment fade-right"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <div class="image-placeholder fragment fade-right" style="display: none">
-                <i class="fa-solid fa-mobile-screen"></i>
-                <span><strong>img/2.png</strong><br>Vista Cuidador</span>
-              </div>
-
-              <div class="showcase-info fragment fade-left">
-                <div class="feature-box" style="margin-bottom: 0.8rem">
-                  <h4 style="font-size: 0.72em; color: #a78bfa; margin: 0 0 0.3rem 0">
-                    <i class="fa-solid fa-tower-broadcast"></i> Sincronización en Tiempo Real
-                  </h4>
-                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
-                    El familiar o cuidador recibe confirmación inmediata cuando la medicación ha sido tomada, incluso a kilómetros de distancia.
-                  </p>
-                </div>
-
-                <div class="feature-box">
-                  <h4 style="font-size: 0.72em; color: #fbbf24; margin: 0 0 0.3rem 0">
-                    <i class="fa-solid fa-bell"></i> Alertas Tempranas por Omisión
-                  </h4>
-                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
-                    Notificación push preventiva en caso de retraso prolongado o registro de métricas fuera de los rangos seguros establecidos.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <img
+              src="img/cuidador.png"
+              alt="Vista Cuidador CuidApp"
+              class="screen-mockup-16-9 fragment fade-up"
+            />
           </section>
 
-          <!-- 6.4 Subdiapositiva: Vista Clínica / PDF -->
+          <!-- 6.4 Subdiapositiva 3: Vista Institucional ELEAM -->
           <section
             data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)"
           >
-            <span class="pill" style="color: #f472b6; border-color: rgba(236, 72, 153, 0.4)">
-              <i class="fa-solid fa-file-medical"></i> Demo &bull; Módulo 3
+            <span class="pill" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4)">
+              <i class="fa-solid fa-hospital-user"></i> Módulo 3 &bull; Panel ELEAM / Clínico
             </span>
-            <h3 style="margin-top: 0.4rem">3. Vista Clínica & Reporte PDF</h3>
+            <h3 style="margin-top: 0.3rem">Administración de Pacientes y Multimorbilidad</h3>
+            <p style="font-size: 0.54em; opacity: 0.85; margin: 0.1rem auto 0.4rem auto; max-width: 950px">
+              Gestión centralizada de residentes para residencias y clínicas: visualización de datos antropométricos, grupo sanguíneo, patologías activas múltiples y acciones rápidas de edición o alta.
+            </p>
 
-            <div class="showcase-container">
-              <img
-                src="img/3.png"
-                alt="Vista Clínica PDF"
-                class="phone-mockup fragment fade-right"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <div class="image-placeholder fragment fade-right" style="display: none">
-                <i class="fa-solid fa-file-pdf"></i>
-                <span><strong>img/3.png</strong><br>Reporte Clínico PDF</span>
-              </div>
+            <img
+              src="img/perfiles.png"
+              alt="Gestión de Pacientes CuidApp"
+              class="screen-mockup-16-9 fragment fade-up"
+            />
+          </section>
 
-              <div class="showcase-info fragment fade-left">
-                <div class="feature-box" style="margin-bottom: 0.8rem">
-                  <h4 style="font-size: 0.72em; color: #f472b6; margin: 0 0 0.3rem 0">
-                    <i class="fa-solid fa-bolt"></i> Resumen Clínico para Consulta Rápida
-                  </h4>
-                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
-                    Gráficos de adherencia, evolución de presión y lista de medicamentos actuales estructurados para análisis en <strong>menos de un minuto</strong>.
-                  </p>
-                </div>
+          <!-- 6.5 Subdiapositiva 4: Panel Admin B2B Cuidadores -->
+          <section
+            data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 100%)"
+          >
+            <span class="pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.4)">
+              <i class="fa-solid fa-user-gear"></i> Módulo 4 &bull; Gestión Institucional B2B
+            </span>
+            <h3 style="margin-top: 0.3rem">Asignación de Cuidadores y Trazabilidad</h3>
+            <p style="font-size: 0.54em; opacity: 0.85; margin: 0.1rem auto 0.4rem auto; max-width: 950px">
+              Vinculación de cuidadores formales y familiares por paciente asignado, centralización de correos de contacto, seguridad multi-rol y control del personal asistencial en terreno.
+            </p>
 
-                <div class="feature-box">
-                  <h4 style="font-size: 0.72em; color: #38bdf8; margin: 0 0 0.3rem 0">
-                    <i class="fa-solid fa-share-nodes"></i> Exportación e Interoperabilidad Universal
-                  </h4>
-                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
-                    Documento PDF estándar compatible con cualquier sistema de salud, imprimible o transferible vía correo y mensajería encriptada.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <img
+              src="img/admin.png"
+              alt="Gestión de Cuidadores CuidApp"
+              class="screen-mockup-16-9 fragment fade-up"
+            />
           </section>
         </section>
 
@@ -720,7 +671,7 @@
         height: 800,
         slideNumber: "c/t",
         transition: "convex",
-        margin: 0.05,
+        margin: 0.02,
         plugins: [RevealHighlight, RevealNotes, RevealSearch, RevealZoom],
       });
     </script>
