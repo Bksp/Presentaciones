@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>CuidApp - Pitch de Innovación | Proyectos Colaborativos</title>
+    <meta
+      name="description"
+      content="Seguimiento clínico portátil para adultos mayores y pacientes crónicos. Pitch de Innovación Regional Santo Tomás."
+    />
+
+    <!-- Reveal.js Base Styles -->
+    <link rel="stylesheet" href="../../vendor/reveal/dist/reset.css" />
+    <link rel="stylesheet" href="../../vendor/reveal/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../vendor/reveal/dist/theme/black.css"
+      id="theme"
+    />
+    <link
+      rel="stylesheet"
+      href="../../vendor/reveal/dist/plugin/highlight/monokai.css"
+    />
+
+    <!-- Font Awesome 6.5.1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Estilos específicos del pitch -->
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Footer continuo -->
+      <div class="reveal-footer-demo">
+        <img
+          src="img/cuidapp-logo.svg"
+          alt="Logo CuidApp"
+          style="width: 14px; height: 14px; vertical-align: middle;"
+        />
+        <span>CuidApp &bull; Proyectos Colaborativos de Innovación Regional</span>
+      </div>
+
+      <div class="slides">
+        <!-- ══════════════════════════════════════════
+             SLIDE 1 — Portada del Pitch
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 50%, #311042 100%)"
+        >
+          <span class="pill">
+            <i class="fa-solid fa-lightbulb"></i> Proyectos Colaborativos de Innovación Regional
+          </span>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1.1rem; margin-top: 0.6rem">
+            <img src="img/cuidapp-logo.svg" alt="Logo CuidApp" class="brand-logo-hero" />
+            <h1 class="hero-title" style="margin: 0">CuidApp</h1>
+          </div>
+          <p style="font-size: 0.88em; opacity: 0.85; max-width: 900px; margin: 0.4rem auto 0 auto; line-height: 1.4">
+            Seguimiento clínico portátil para adultos mayores y pacientes crónicos
+          </p>
+
+          <div class="grid-4" style="margin-top: 2.3rem">
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-pen" style="color: #38bdf8"></i>
+              </div>
+              <h4 style="font-size: 0.72em; margin: 0; color: #38bdf8">
+                Ayleen Martínez
+              </h4>
+              <p style="font-size: 0.54em; opacity: 0.7; margin: 0.2rem 0 0 0">
+                Ing. en Informática
+              </p>
+            </div>
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-pen" style="color: #a78bfa"></i>
+              </div>
+              <h4 style="font-size: 0.72em; margin: 0; color: #a78bfa">
+                Catherine Gómez
+              </h4>
+              <p style="font-size: 0.54em; opacity: 0.7; margin: 0.2rem 0 0 0">
+                Ing. en Informática
+              </p>
+            </div>
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-pen" style="color: #f472b6"></i>
+              </div>
+              <h4 style="font-size: 0.72em; margin: 0; color: #f472b6">
+                Fabián Cares
+              </h4>
+              <p style="font-size: 0.54em; opacity: 0.7; margin: 0.2rem 0 0 0">
+                Ing. en Informática
+              </p>
+            </div>
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-pen" style="color: #34d399"></i>
+              </div>
+              <h4 style="font-size: 0.72em; margin: 0; color: #34d399">
+                Sebastián Pérez
+              </h4>
+              <p style="font-size: 0.54em; opacity: 0.7; margin: 0.2rem 0 0 0">
+                Ing. en Informática
+              </p>
+            </div>
+          </div>
+
+          <p style="font-size: 0.52em; opacity: 0.5; margin-top: 1.8rem">
+            Santo Tomás &bull; Sede Santiago Centro &bull; 2026
+          </p>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 2 — Presentación del Caso: Problemática
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e293b 100%)"
+        >
+          <span class="pill" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4)">
+            <i class="fa-solid fa-triangle-exclamation"></i> Diagnóstico y Contexto
+          </span>
+          <h2 style="margin-top: 0.5rem">Presentación del Caso</h2>
+
+          <!-- Métricas clave de contexto -->
+          <div class="grid-3" style="margin-top: 0.8rem">
+            <div class="stat-card fragment fade-up">
+              <div class="stat-number highlight-cyan">+70%</div>
+              <div class="stat-label">
+                Adultos mayores en Chile con al menos una <strong>enfermedad crónica</strong>
+              </div>
+            </div>
+            <div class="stat-card fragment fade-up">
+              <div class="stat-number highlight-purple">~50%</div>
+              <div class="stat-label">
+                Presentan <strong>multimorbilidad</strong> y polifarmacia recurrente (MINSAL)
+              </div>
+            </div>
+            <div class="stat-card fragment fade-up">
+              <div class="stat-number highlight-amber">0%</div>
+              <div class="stat-label">
+                <strong>Interoperabilidad real</strong> entre red pública (CESFAM/FONASA) y clínicas privadas
+              </div>
+            </div>
+          </div>
+
+          <!-- Matriz de actores en terreno -->
+          <table class="fragment fade-up" style="margin-top: 1.1rem">
+            <colgroup>
+              <col style="width: 22%" />
+              <col style="width: 44%" />
+              <col style="width: 34%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Actor Clave</th>
+                <th>Causa / Evidencia en Terreno</th>
+                <th>Consecuencia Crítica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-cyan">Paciente (60+)</span></td>
+                <td>Recetas en papel, calendarios físicos y dependencia de la memoria</td>
+                <td><strong style="color: #f87171">Errores de dosificación</strong> y angustia constante</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-purple">Cuidador (30–55)</span></td>
+                <td>Monitoreo fragmentado por llamadas y chats desordenados durante su trabajo</td>
+                <td><strong style="color: #fbbf24">Sobrecarga cognitiva</strong> y sentimiento de culpa</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-pink">Médico / Urgencia</span></td>
+                <td>Pacientes acuden a consulta sin antecedentes completos del otro sector clínico</td>
+                <td><strong style="color: #f472b6">Pérdida de tiempo crítico</strong> y duplicación de exámenes</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <aside class="notes">
+            Enfatizar cómo la oportunidad radica en empoderar al paciente y a su familia como los portadores digitales de su propia información médica.
+          </aside>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 3 — Solución y Validación en Marcha
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)"
+        >
+          <span class="pill" style="color: #a78bfa; border-color: rgba(139, 92, 246, 0.4)">
+            <i class="fa-solid fa-clipboard-check"></i> Propuesta de Valor & Aprendizajes
+          </span>
+          <h2 style="margin-top: 0.5rem">Solución y Validación en Marcha</h2>
+
+          <!-- Pilares de la solución -->
+          <div class="grid-3" style="margin-top: 0.8rem">
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-mobile-screen-button" style="color: #38bdf8"></i>
+              </div>
+              <h4 style="font-size: 0.72em; color: #38bdf8; margin-bottom: 0.3rem">
+                Baja Carga Cognitiva
+              </h4>
+              <p style="font-size: 0.56em; opacity: 0.85; line-height: 1.5">
+                Centraliza signos vitales, digitaliza recetas médicas y sincroniza recordatorios en tiempo real.
+              </p>
+            </div>
+
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-file-pdf" style="color: #ec4899"></i>
+              </div>
+              <h4 style="font-size: 0.72em; color: #ec4899; margin-bottom: 0.3rem">
+                Interoperabilidad Portátil
+              </h4>
+              <p style="font-size: 0.56em; opacity: 0.85; line-height: 1.5">
+                Genera reportes clínicos estandarizados en <strong>PDF</strong> diseñados para lectura médica en <strong>menos de 1 minuto</strong>.
+              </p>
+            </div>
+
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-shield-halved" style="color: #34d399"></i>
+              </div>
+              <h4 style="font-size: 0.72em; color: #34d399; margin-bottom: 0.3rem">
+                Arquitectura Segura
+              </h4>
+              <p style="font-size: 0.56em; opacity: 0.85; line-height: 1.5">
+                Nube encriptada para datos de salud, notificaciones push y validación con personal asistencial (TENS).
+              </p>
+            </div>
+          </div>
+
+          <!-- Tabla de testeo y ajustes -->
+          <table class="fragment fade-up" style="margin-top: 1rem">
+            <colgroup>
+              <col style="width: 24%" />
+              <col style="width: 40%" />
+              <col style="width: 36%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Aspecto Evaluado</th>
+                <th>Evidencia del Testeo en Terreno</th>
+                <th>Ajuste Incorporado al Prototipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Alertas y Reporte PDF</strong></td>
+                <td>Validado por cuidadores y médicos como solución clave al desorden</td>
+                <td><span class="badge badge-cyan">Priorización</span> en el flujo principal de navegación</td>
+              </tr>
+              <tr>
+                <td><strong>Métricas de Salud</strong></td>
+                <td>Feedback de cuidadora formal: presión y glucosa resultan insuficientes</td>
+                <td><span class="badge badge-purple">Módulo escalable</span> de signos vitales personalizados</td>
+              </tr>
+              <tr>
+                <td><strong>Usabilidad 60+</strong></td>
+                <td>Dificultad visual y motora comprobada en adultos mayores</td>
+                <td><span class="badge badge-emerald">Simplificación</span> de botones y navegación asistida</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 4 — Mercado Objetivo y Actores
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #1e293b 0%, #0f172a 100%)"
+        >
+          <span class="pill" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4)">
+            <i class="fa-solid fa-users"></i> Segmentación & Ecosistema
+          </span>
+          <h2 style="margin-top: 0.5rem">Mercado Objetivo y Actores Vinculados</h2>
+
+          <table class="fragment fade-up" style="margin-top: 1.2rem">
+            <colgroup>
+              <col style="width: 25%" />
+              <col style="width: 47%" />
+              <col style="width: 28%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Segmento / Actor</th>
+                <th>Caracterización y Necesidad</th>
+                <th>Rol en CuidApp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong style="color: #38bdf8">Adultos Mayores (60+)</strong>
+                </td>
+                <td>Pacientes crónicos polimedicados; requieren autonomía, interfaz clara y mínima fricción tecnológica.</td>
+                <td><span class="badge badge-cyan">Usuario Directo</span><br><small style="opacity: 0.75">Acceso libre / Plan Gratuito</small></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong style="color: #a78bfa">Cuidadores Familiares</strong>
+                </td>
+                <td>30 a 55 años, laboralmente activos; necesitan monitoreo remoto, trazabilidad y paz mental.</td>
+                <td><span class="badge badge-purple">Cliente Adoptante</span><br><small style="opacity: 0.75">Suscripción B2C Familiar</small></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong style="color: #f472b6">ELEAM y Centros Médicos</strong>
+                </td>
+                <td>Residencias de adultos mayores y centros asistenciales con gestión simultánea multi-paciente.</td>
+                <td><span class="badge badge-pink">Cliente Institucional</span><br><small style="opacity: 0.75">Licencias B2B Profesionales</small></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong style="color: #34d399">Ecosistema Aliado</strong>
+                </td>
+                <td>CESFAM, profesionales TENS/médicos, SENAMA, farmacias comunitarias, CORFO e IP Santo Tomás.</td>
+                <td><span class="badge badge-emerald">Validación & Difusión</span><br><small style="opacity: 0.75">Soporte técnico y financiamiento</small></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="grid-2 fragment fade-up" style="margin-top: 1.2rem">
+            <div class="feature-box" style="padding: 0.75rem 1rem">
+              <span style="font-size: 0.62em; color: #38bdf8; font-weight: 700">ENFOQUE CENTRADO EN LA FAMILIA</span>
+              <p style="font-size: 0.55em; opacity: 0.85; margin: 0.3rem 0 0 0">
+                El usuario final (adulto mayor) recibe asistencia gratuita y accesible, mientras el cuidador adquiere las herramientas avanzadas de sincronización.
+              </p>
+            </div>
+            <div class="feature-box" style="padding: 0.75rem 1rem">
+              <span style="font-size: 0.62em; color: #34d399; font-weight: 700">ESCALABILIDAD ASISTENCIAL</span>
+              <p style="font-size: 0.55em; opacity: 0.85; margin: 0.3rem 0 0 0">
+                Apertura directa a residencias de larga estadía (ELEAM) para optimizar turnos y registro clínico unificado.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 5 — Modelo de Negocio, Financiamiento e Impacto
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 100%)"
+        >
+          <span class="pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.4)">
+            <i class="fa-solid fa-chart-line"></i> Sostenibilidad & Retorno Social
+          </span>
+          <h2 style="margin-top: 0.5rem">Modelo de Negocio, Financiamiento e Impacto</h2>
+
+          <div class="grid-3" style="margin-top: 0.8rem">
+            <!-- Modelo B2C -->
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-house-user" style="color: #38bdf8"></i>
+              </div>
+              <h4 style="font-size: 0.72em; color: #38bdf8; margin-bottom: 0.2rem">
+                B2C &bull; Plan Familiar
+              </h4>
+              <p style="font-size: 0.55em; opacity: 0.85; line-height: 1.5; margin: 0">
+                <strong>Freemium:</strong> Registro básico gratuito de adquisición.<br>
+                <strong>Premium:</strong> <span class="highlight-cyan">$4.990 CLP/mes</span> por sincronización multi-cuidador, alertas cruzadas y reportes PDF ilimitados.
+              </p>
+            </div>
+
+            <!-- Modelo B2B -->
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-building-shield" style="color: #a78bfa"></i>
+              </div>
+              <h4 style="font-size: 0.72em; color: #a78bfa; margin-bottom: 0.2rem">
+                B2B &bull; Institucional
+              </h4>
+              <p style="font-size: 0.55em; opacity: 0.85; line-height: 1.5; margin: 0">
+                <strong>ELEAM y Centros de Salud:</strong><br>
+                Licenciamiento SaaS por paciente activo a <span class="highlight-purple">$1.500 CLP/mes</span>, con panel centralizado para enfermería y TENS.
+              </p>
+            </div>
+
+            <!-- Fondo Semilla Inicia -->
+            <div class="feature-box fragment fade-up">
+              <div class="feature-icon">
+                <i class="fa-solid fa-seedling" style="color: #34d399"></i>
+              </div>
+              <h4 style="font-size: 0.72em; color: #34d399; margin-bottom: 0.2rem">
+                Financiamiento CORFO
+              </h4>
+              <p style="font-size: 0.55em; opacity: 0.85; line-height: 1.5; margin: 0">
+                Postulación a <strong>Semilla Inicia de CORFO</strong> para prototipos de rápida validación en terreno, seguridad en nube y pilotos regionales.
+              </p>
+            </div>
+          </div>
+
+          <!-- Matriz de Impacto Cuádruple -->
+          <div class="grid-4 fragment fade-up" style="margin-top: 1rem">
+            <div class="feature-box" style="padding: 0.7rem 0.8rem">
+              <h5 style="font-size: 0.65em; color: #38bdf8; margin: 0 0 0.2rem 0">
+                <i class="fa-solid fa-heart"></i> Social
+              </h5>
+              <p style="font-size: 0.52em; opacity: 0.8; margin: 0; line-height: 1.4">
+                Reducción de errores de dosificación y alivio del agotamiento emocional del cuidador familiar.
+              </p>
+            </div>
+
+            <div class="feature-box" style="padding: 0.7rem 0.8rem">
+              <h5 style="font-size: 0.65em; color: #a78bfa; margin: 0 0 0.2rem 0">
+                <i class="fa-solid fa-network-wired"></i> Técnico
+              </h5>
+              <p style="font-size: 0.52em; opacity: 0.8; margin: 0; line-height: 1.4">
+                Interoperabilidad portátil centrada en el paciente sin depender de la integración de servidores cerrados.
+              </p>
+            </div>
+
+            <div class="feature-box" style="padding: 0.7rem 0.8rem">
+              <h5 style="font-size: 0.65em; color: #34d399; margin: 0 0 0.2rem 0">
+                <i class="fa-solid fa-leaf"></i> Ambiental
+              </h5>
+              <p style="font-size: 0.52em; opacity: 0.8; margin: 0; line-height: 1.4">
+                Disminución de papel en recetas duplicadas, libretas de control y órdenes de exámenes extraviadas.
+              </p>
+            </div>
+
+            <div class="feature-box" style="padding: 0.7rem 0.8rem">
+              <h5 style="font-size: 0.65em; color: #fbbf24; margin: 0 0 0.2rem 0">
+                <i class="fa-solid fa-coins"></i> Financiero
+              </h5>
+              <p style="font-size: 0.52em; opacity: 0.8; margin: 0; line-height: 1.4">
+                Ahorro directo para el sistema público y familiar al prevenir visitas a urgencias por descompensaciones.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 6 — Flujos de la Demo Funcional
+        ══════════════════════════════════════════ -->
+        <section>
+          <!-- 6.1 Resumen de la Demo con QR Interactivo -->
+          <section
+            data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 50%, #311042 100%)"
+          >
+            <span class="pill">
+              <i class="fa-solid fa-play"></i> Demostración del MVP
+            </span>
+            <h2 style="margin-top: 0.4rem">Flujo de la Demo Funcional</h2>
+            <p style="font-size: 0.68em; opacity: 0.85; max-width: 800px; margin: 0.3rem auto 0.8rem auto">
+              Recorrido interactivo por los tres puntos de contacto esenciales de la plataforma
+            </p>
+
+            <div style="display: flex; gap: 2.2rem; align-items: center; justify-content: center; margin-top: 0.6rem">
+              <!-- Columna izquierda: Tabla de flujos -->
+              <div style="flex: 1.35; text-align: left">
+                <table class="fragment fade-up" style="margin-top: 0">
+                  <colgroup>
+                    <col style="width: 32%" />
+                    <col style="width: 68%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Flujo de la Demo</th>
+                      <th>Funcionalidad Clave Demostrada</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge badge-cyan">1. Adulto Mayor</span></td>
+                      <td>Confirmación de dosis en <strong>un toque</strong> y registro táctil de signos vitales.</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-purple">2. Cuidador</span></td>
+                      <td>Panel sincronizado en <strong>tiempo real</strong> con alertas preventivas inmediatas.</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-pink">3. Clínica / PDF</span></td>
+                      <td>Exportación instantánea de reporte médico estandarizado en <strong>PDF (&lt; 1 min)</strong>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p style="font-size: 0.56em; opacity: 0.6; margin-top: 1rem">
+                  Presiona <strong style="color: #38bdf8">ABAJO &darr;</strong> para examinar cada interfaz en pantalla
+                </p>
+              </div>
+
+              <!-- Columna derecha: Tarjeta QR destacada -->
+              <div style="flex: 0.85; display: flex; justify-content: center">
+                <div class="qr-card fragment fade-up">
+                  <div class="qr-badge">
+                    <img src="img/cuidapp-logo.svg" alt="Logo CuidApp" />
+                    <span>Demo Interactiva Web</span>
+                  </div>
+                  <div class="qr-frame">
+                    <img src="img/qr-demo.svg" alt="Código QR CuidApp Demo" class="qr-image" />
+                  </div>
+                  <div class="qr-caption">
+                    <i class="fa-solid fa-arrow-pointer"></i> ¡Entra a la demo!
+                  </div>
+                  <a
+                    href="https://bksp.github.io/cuidApp-demo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="qr-link"
+                  >
+                    bksp.github.io/cuidApp-demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6.2 Subdiapositiva: Vista Adulto Mayor -->
+          <section
+            data-background-gradient="linear-gradient(135deg, #0b0f19 0%, #1e1b4b 100%)"
+          >
+            <span class="pill" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4)">
+              <i class="fa-solid fa-person-cane"></i> Demo &bull; Módulo 1
+            </span>
+            <h3 style="margin-top: 0.4rem">1. Vista Adulto Mayor</h3>
+
+            <div class="showcase-container">
+              <img
+                src="img/1.png"
+                alt="Vista Adulto Mayor"
+                class="phone-mockup fragment fade-right"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="image-placeholder fragment fade-right" style="display: none">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span><strong>img/1.png</strong><br>Vista Adulto Mayor</span>
+              </div>
+
+              <div class="showcase-info fragment fade-left">
+                <div class="feature-box" style="margin-bottom: 0.8rem">
+                  <h4 style="font-size: 0.72em; color: #38bdf8; margin: 0 0 0.3rem 0">
+                    <i class="fa-solid fa-hand-pointer"></i> Interfaz Táctil de Alta Legibilidad
+                  </h4>
+                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
+                    Diseñada con botones de alto contraste y área de contacto amplia. El paciente confirma la ingesta de fármacos con una sola pulsación.
+                  </p>
+                </div>
+
+                <div class="feature-box">
+                  <h4 style="font-size: 0.72em; color: #34d399; margin: 0 0 0.3rem 0">
+                    <i class="fa-solid fa-heart-pulse"></i> Captura Sencilla de Signos Vitales
+                  </h4>
+                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
+                    Ingreso guiado de glucosa, presión arterial y pulsaciones, eliminando la necesidad de planillas de papel.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6.3 Subdiapositiva: Vista Cuidador -->
+          <section
+            data-background-gradient="linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)"
+          >
+            <span class="pill" style="color: #a78bfa; border-color: rgba(139, 92, 246, 0.4)">
+              <i class="fa-solid fa-user-nurse"></i> Demo &bull; Módulo 2
+            </span>
+            <h3 style="margin-top: 0.4rem">2. Vista Cuidador</h3>
+
+            <div class="showcase-container">
+              <img
+                src="img/2.png"
+                alt="Vista Cuidador"
+                class="phone-mockup fragment fade-right"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="image-placeholder fragment fade-right" style="display: none">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span><strong>img/2.png</strong><br>Vista Cuidador</span>
+              </div>
+
+              <div class="showcase-info fragment fade-left">
+                <div class="feature-box" style="margin-bottom: 0.8rem">
+                  <h4 style="font-size: 0.72em; color: #a78bfa; margin: 0 0 0.3rem 0">
+                    <i class="fa-solid fa-tower-broadcast"></i> Sincronización en Tiempo Real
+                  </h4>
+                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
+                    El familiar o cuidador recibe confirmación inmediata cuando la medicación ha sido tomada, incluso a kilómetros de distancia.
+                  </p>
+                </div>
+
+                <div class="feature-box">
+                  <h4 style="font-size: 0.72em; color: #fbbf24; margin: 0 0 0.3rem 0">
+                    <i class="fa-solid fa-bell"></i> Alertas Tempranas por Omisión
+                  </h4>
+                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
+                    Notificación push preventiva en caso de retraso prolongado o registro de métricas fuera de los rangos seguros establecidos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6.4 Subdiapositiva: Vista Clínica / PDF -->
+          <section
+            data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)"
+          >
+            <span class="pill" style="color: #f472b6; border-color: rgba(236, 72, 153, 0.4)">
+              <i class="fa-solid fa-file-medical"></i> Demo &bull; Módulo 3
+            </span>
+            <h3 style="margin-top: 0.4rem">3. Vista Clínica & Reporte PDF</h3>
+
+            <div class="showcase-container">
+              <img
+                src="img/3.png"
+                alt="Vista Clínica PDF"
+                class="phone-mockup fragment fade-right"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="image-placeholder fragment fade-right" style="display: none">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span><strong>img/3.png</strong><br>Reporte Clínico PDF</span>
+              </div>
+
+              <div class="showcase-info fragment fade-left">
+                <div class="feature-box" style="margin-bottom: 0.8rem">
+                  <h4 style="font-size: 0.72em; color: #f472b6; margin: 0 0 0.3rem 0">
+                    <i class="fa-solid fa-bolt"></i> Resumen Clínico para Consulta Rápida
+                  </h4>
+                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
+                    Gráficos de adherencia, evolución de presión y lista de medicamentos actuales estructurados para análisis en <strong>menos de un minuto</strong>.
+                  </p>
+                </div>
+
+                <div class="feature-box">
+                  <h4 style="font-size: 0.72em; color: #38bdf8; margin: 0 0 0.3rem 0">
+                    <i class="fa-solid fa-share-nodes"></i> Exportación e Interoperabilidad Universal
+                  </h4>
+                  <p style="font-size: 0.58em; opacity: 0.85; margin: 0; line-height: 1.5">
+                    Documento PDF estándar compatible con cualquier sistema de salud, imprimible o transferible vía correo y mensajería encriptada.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SLIDE 7 — Conclusión y Cierre
+        ══════════════════════════════════════════ -->
+        <section
+          data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #0b0f19 100%)"
+        >
+          <span class="pill" style="border-color: rgba(192, 132, 252, 0.4); color: #c084fc">
+            <i class="fa-solid fa-flag-checkered"></i> Conclusión
+          </span>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; margin-top: 0.8rem">
+            <img src="img/cuidapp-logo.svg" alt="Logo CuidApp" style="width: 36px; height: 36px; object-fit: contain;" />
+            <h2 style="font-size: 2em; margin: 0">El Futuro del Cuidado Crónico</h2>
+          </div>
+
+          <div
+            class="feature-box fragment fade-up"
+            style="
+              margin: 1.8rem auto 0 auto;
+              max-width: 820px;
+              text-align: center;
+              padding: 1.5rem 2rem;
+              border-color: rgba(56, 189, 248, 0.35);
+              background: rgba(15, 23, 42, 0.85);
+            "
+          >
+            <p
+              style="
+                font-size: 0.82em;
+                font-style: italic;
+                color: #e2e8f0;
+                line-height: 1.7;
+                margin: 0;
+              "
+            >
+              &ldquo;CuidApp transforma información clínica dispersa en tranquilidad para las familias y decisiones médicas seguras en consulta.&rdquo;
+            </p>
+          </div>
+
+          <div class="grid-3 fragment fade-up" style="max-width: 750px; margin: 2rem auto 0 auto">
+            <div style="text-align: center">
+              <span class="badge badge-cyan" style="font-size: 0.85em; padding: 0.4em 0.8em">
+                <i class="fa-solid fa-shield-heart"></i> Adherencia
+              </span>
+            </div>
+            <div style="text-align: center">
+              <span class="badge badge-purple" style="font-size: 0.85em; padding: 0.4em 0.8em">
+                <i class="fa-solid fa-hands-holding-circle"></i> Tranquilidad
+              </span>
+            </div>
+            <div style="text-align: center">
+              <span class="badge badge-emerald" style="font-size: 0.85em; padding: 0.4em 0.8em">
+                <i class="fa-solid fa-stethoscope"></i> Interoperabilidad
+              </span>
+            </div>
+          </div>
+
+          <p style="font-size: 0.58em; opacity: 0.45; margin-top: 2.5rem">
+            Presiona <kbd style="background: rgba(255, 255, 255, 0.15); padding: 2px 8px; border-radius: 4px">ESC</kbd> para ver la vista global de diapositivas
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Scripts de Reveal.js -->
+    <script src="../../vendor/reveal/dist/reveal.js"></script>
+    <script src="../../vendor/reveal/dist/plugin/notes/notes.js"></script>
+    <script src="../../vendor/reveal/dist/plugin/highlight/highlight.js"></script>
+    <script src="../../vendor/reveal/dist/plugin/search/search.js"></script>
+    <script src="../../vendor/reveal/dist/plugin/zoom/zoom.js"></script>
+
+    <script>
+      Reveal.initialize({
+        hash: true,
+        width: 1400,
+        height: 800,
+        slideNumber: "c/t",
+        transition: "convex",
+        margin: 0.05,
+        plugins: [RevealHighlight, RevealNotes, RevealSearch, RevealZoom],
+      });
+    </script>
+  </body>
+</html>

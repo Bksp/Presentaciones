@@ -1,0 +1,382 @@
+/* Estilos personalizados para el Pitch de Innovación: CuidApp */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  --r-main-font-size: 26px;
+  --r-heading1-size: 2.3em;
+  --r-heading2-size: 1.35em;
+  --r-heading3-size: 1.1em;
+  --r-heading-text-transform: none;
+  --r-heading-font-weight: 700;
+  --r-block-margin: 14px;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --accent-cyan: #06b6d4;
+  --accent-blue: #38bdf8;
+  --accent-indigo: #6366f1;
+  --accent-purple: #8b5cf6;
+  --accent-pink: #ec4899;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+}
+
+.reveal {
+  font-family: var(--font-body);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 0.6em 1.8em;
+}
+
+/* ── Título Héroe con Gradiente ── */
+.hero-title {
+  font-size: 3em !important;
+  font-weight: 800;
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.4rem !important;
+}
+
+/* ── Cajas de Características (Glassmorphism) ── */
+.feature-box {
+  background: rgba(30, 41, 59, 0.72);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+.feature-icon {
+  font-size: 1.6em;
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+
+/* ── Tarjetas de Estadísticas Grandes ── */
+.stat-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 14px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.4em;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.62em;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* ── Pills e Indicadores ── */
+.pill {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  border-radius: 50px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  font-size: 0.72em;
+  font-weight: 600;
+}
+
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 999px;
+  font-size: 0.8em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-cyan {
+  background: rgba(6, 182, 212, 0.2);
+  color: #38bdf8;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.badge-purple {
+  background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.badge-pink {
+  background: rgba(236, 72, 153, 0.2);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.4);
+}
+
+.badge-emerald {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.badge-amber {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+/* ── Grids ── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+/* ── Tablas estilizadas ── */
+.reveal table {
+  font-size: 0.54em;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 0.8rem;
+}
+
+.reveal table th {
+  background: rgba(56, 189, 248, 0.18);
+  color: #38bdf8;
+  padding: 0.5em 0.6em;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.35);
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.reveal table td {
+  padding: 0.45em 0.6em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: top;
+  color: rgba(255, 255, 255, 0.88);
+  word-break: break-word;
+  line-height: 1.45;
+}
+
+.reveal table tr:hover td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ── Footer permanente ── */
+.reveal-footer-demo {
+  position: absolute;
+  bottom: 14px;
+  left: 24px;
+  font-size: 0.42em;
+  opacity: 0.55;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.03em;
+}
+
+/* ── Maquetas de Pantalla y Showcases ── */
+.showcase-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.showcase-info {
+  flex: 1;
+  text-align: left;
+  max-width: 680px;
+}
+
+.phone-mockup {
+  height: 510px;
+  max-height: 510px;
+  width: auto;
+  border-radius: 26px;
+  border: 4px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  background: #0f172a;
+}
+
+.phone-mockup:hover {
+  transform: scale(1.02);
+}
+
+.image-placeholder {
+  height: 490px;
+  width: 250px;
+  border-radius: 26px;
+  border: 2px dashed rgba(56, 189, 248, 0.45);
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.image-placeholder i {
+  font-size: 2.8rem;
+  color: #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+.image-placeholder span {
+  font-size: 0.6em;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+/* ── Resaltados en texto ── */
+.highlight-cyan {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.highlight-purple {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.highlight-emerald {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.highlight-amber {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+/* ── Tarjeta QR para Demo en Vivo ── */
+.qr-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 20px;
+  padding: 1.1rem 1.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 24px rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.qr-card:hover {
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 32px rgba(56, 189, 248, 0.3);
+  transform: translateY(-3px);
+}
+
+.qr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.58em;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.qr-badge img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.qr-frame {
+  background: #ffffff;
+  padding: 0.6rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 165px;
+  margin-bottom: 0.75rem;
+}
+
+.qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.qr-caption {
+  font-size: 0.76em;
+  font-weight: 700;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.qr-link {
+  font-size: 0.52em;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+  word-break: break-all;
+}
+
+.qr-link:hover {
+  color: #38bdf8;
+}
+
+.brand-logo-hero {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}

@@ -5,5 +5,12 @@
     "description": "Presentación interactiva creada con reveal.js",
     "tag": "Presentación",
     "url": "presentaciones/aplicacion-android/index.html"
+  },
+  {
+    "id": "proyectos-colaborativos",
+    "title": "CuidApp - Pitch de Innovación | Proyectos Colaborativos",
+    "description": "Seguimiento clínico portátil para adultos mayores y pacientes crónicos. Pitch de Innovación Regional Santo Tomás.",
+    "tag": "Presentación",
+    "url": "presentaciones/proyectos-colaborativos/index.html"
   }
 ]
